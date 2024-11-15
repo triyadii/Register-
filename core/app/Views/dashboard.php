@@ -24,7 +24,7 @@ include('nav/admin/header.php');
                                         <i class="bi bi-calendar2-event"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>145</h6>
+                                        <h6><?= $data['jumlahEvent'] ?></h6>
                                     </div>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@ include('nav/admin/header.php');
                                         <i class="bi bi-person-check"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>145</h6>
+                                        <h6><?= $data['jumlahPeserta'] ?></h6>
                                     </div>
                                 </div>
                             </div>

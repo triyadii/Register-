@@ -24,3 +24,5 @@ $routes->get('/Peserta', 'Page::peserta');
 
 // Proses 
 $routes->post('/RegisterEvent', 'Event_::registrasiEvent');
+$routes->post('/Login', 'User_::login');
+$routes->get('/Keluar', 'User_::keluar');

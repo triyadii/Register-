@@ -25,6 +25,19 @@ class Event extends BaseController
         ];
         return $this->respond($response, 200);
     }
+    public function jumlahEventDanPeserta()
+    {
+        $modelData          = new Model_data;
+        $jumlahDataEvent    = $modelData->jumlahEvent();
+        $jumlahDataPeserta  = $modelData->jumlahPeserta();
+        $response = [
+            'status'        => 200,
+            'messages'      => "Berhasil Menampilkan Jumlah Event",
+            'jumlahEvent'   => $jumlahDataEvent,
+            'jumlahPeserta' => $jumlahDataPeserta
+        ];
+        return $this->respond($response, 200);
+    }
     public function tampilOperator($username)
     {
         $modelData        = new Model_data;

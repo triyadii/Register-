@@ -1,5 +1,7 @@
 <?php
-$session = session();
+$session        = session();
+$username       = $session->get('username');
+$namaHakAkses   = $session->get('namaHakAkses');
 ?>
 
 <!DOCTYPE html>
@@ -56,24 +58,13 @@ $session = session();
 
                 <li class="nav-item dropdown pe-3">
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="assets_admin/img/profile-img.jpg" alt="Profile" class="rounded-circle" />
-                        <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span> </a>
+                        <span class="d-none d-md-block dropdown-toggle ps-2"><?= $username ?></span> </a>
                     <!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>M Dico Triyadi</h6>
-                            <span>Admin</span>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider" />
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                <i class="bi bi-person"></i>
-                                <span>Profile</span>
-                            </a>
+                            <h6><?= $username ?></h6>
+                            <span><?= $namaHakAkses ?></span>
                         </li>
                         <li>
                             <hr class="dropdown-divider" />
@@ -90,7 +81,7 @@ $session = session();
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
+                            <a class="dropdown-item d-flex align-items-center" href="<?= base_url() ?>Keluar">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Keluar</span>
                             </a>

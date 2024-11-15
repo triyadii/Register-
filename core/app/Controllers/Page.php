@@ -17,25 +17,23 @@ class Page extends BaseController
     {
         return view('landingPage');
     }
-    // =========================================
-    // Halaman Admin
-    public function dashboard()
-    {
-        return view('dashboard');
-    }
-    public function login()
-    {
-        return view('login');
-    }
     public function registrasiEvent()
     {
         return view('registrasiEvent');
     }
-    public function uploadBuktiBayar($idEvent = null)
+    // =========================================
+    // Halaman Admin
+    public function dashboard()
     {
+        $session        = session();
+        $statusLogin    = $session->get('statusLogin');
+        $token          = $session->get('token');
+        if ($statusLogin == 0) {
+            return redirect()->to(base_url() . 'Login');
+        }
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://api.register.co.id/api/TampilEventById/' . $idEvent,
+            CURLOPT_URL => 'https://api.register.co.id/api/JumlahEventDanPeserta',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
@@ -51,16 +49,34 @@ class Page extends BaseController
         $response = curl_exec($curl);
         $httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
         curl_close($curl);
-        $hasilResponse = json_decode($response, true);
-        $dataPeserta   = $hasilResponse['data'];
-        return view('uploadBuktiBayar', compact('dataEvent'));
+        $data = json_decode($response, true);
+        return view('dashboard', compact('data'));
+    }
+    public function login()
+    {
+        $session        = session();
+        $statusLogin    = $session->get('statusLogin');
+        if ($statusLogin == 1) {
+            return redirect()->to(base_url());
+        }
+        return view('login');
     }
     public function event()
     {
+        $session        = session();
+        $statusLogin    = $session->get('statusLogin');
+        if ($statusLogin == 0) {
+            return redirect()->to(base_url() . 'Login');
+        }
         return view('event');
     }
     public function userAdmin()
     {
+        $session        = session();
+        $statusLogin    = $session->get('statusLogin');
+        if ($statusLogin == 0) {
+            return redirect()->to(base_url() . 'Login');
+        }
         return view('userAdmin');
     }
     public function userOperator()

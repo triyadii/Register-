@@ -73,7 +73,6 @@ class Akun extends BaseController
                     'messages'  => "Login Berhasil",
                     'data'      => [
                         'username'      => $cekUsername[0]['username'],
-                        'nama'          => $cekUsername[0]['username'],
                         'hakAkses'      => $cekUsername[0]['hakAkses'],
                         'namaHakAkses'  => $cekUsername[0]['namaHakAkses'],
                         'userId'        => $cekUsername[0]['idAkun'],

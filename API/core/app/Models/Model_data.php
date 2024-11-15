@@ -114,6 +114,13 @@ class Model_data extends Model
         $builder->join('tbl_event', 'tbl_event.idEvent = tbl_operator.event');
         return $builder->get()->getResultArray();
     }
+    public function jumlahEvent()
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('tbl_event');
+        $builder->select('*');
+        return $builder->countAllResults();
+    }
     // =========================================================================
     // Manajemen Peserta
     // =========================================================================
@@ -164,5 +171,12 @@ class Model_data extends Model
         $builder->join('tbl_event', 'tbl_event.idEvent = tbl_peserta.event');
         $builder->join('tbl_akun', 'tbl_akun.idAkun = tbl_peserta.akun');
         return $builder->get()->getResultArray();
+    }
+    public function jumlahPeserta()
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('tbl_peserta');
+        $builder->select('*');
+        return $builder->countAllResults();
     }
 }

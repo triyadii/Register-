@@ -50,7 +50,7 @@
                                         <p class="text-center small">Masukkan Username Dan Password Anda</p>
                                     </div>
 
-                                    <form class="row g-3 needs-validation" novalidate>
+                                    <form class="row g-3 needs-validation" method="post" action="Login" novalidate>
 
                                         <div class="col-12">
                                             <label for="yourUsername" class="form-label">Username</label>

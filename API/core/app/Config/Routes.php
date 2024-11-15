@@ -59,6 +59,7 @@ $routes->group("api", function ($routes) {
     $routes->post("UploadBuktiBayar/(:num)", "Event::uploadBuktiBayar/$1", ['filter' => 'authFilter']);
     $routes->get("KonfirmasiPembayaran/(:num)/(:num)/(:any)", "Event::konfirmasiPembayaran/$1/$2/$3", ['filter' => 'authFilter']);
     $routes->delete("HapusEvent/(:num)/(:any)", "Event::hapus/$1/$2", ['filter' => 'authFilter']);
+    $routes->get("JumlahEventDanPeserta", "Event::jumlahEventDanPeserta", ['filter' => 'authFilter']);
 
     // Manajemen Peserta
     $routes->get("TampilPeserta", "Peserta::index", ['filter' => 'authFilter']);
