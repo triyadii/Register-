@@ -1,0 +1,454 @@
+INFO - 2024-10-26 15:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:07:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-26 15:07:43 --> ErrorException: include(nav/sidebar.php): Failed to open stream: No such file or directory
+[Method: GET, Route: Peserta]
+in APPPATH\Views\peserta.php on line 3.
+ 1 APPPATH\Views\peserta.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(nav/sidebar.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\project\\EventRegistrasi\\indaacSumut2025\\core\\app\\Views\\peserta.php', 3)
+ 2 APPPATH\Views\peserta.php(3): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\project\\EventRegistrasi\\indaacSumut2025\\core\\app\\Views\\peserta.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('peserta', [], true)
+ 6 APPPATH\Controllers\Page.php(189): view('peserta', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Page->peserta()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-26 15:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:08:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:34:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 15:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-26 15:43:34 --> ErrorException: file_get_contents(img/logo.png): Failed to open stream: No such file or directory
+[Method: GET, Route: GenerateQrCode]
+in FCPATH\core\vendor\simplesoftwareio\simple-qrcode\src\Generator.php on line 205.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(img/logo.png): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\project\\EventRegistrasi\\indaacSumut2025\\core\\vendor\\simplesoftwareio\\simple-qrcode\\src\\Generator.php', 205)
+ 2 FCPATH\core\vendor\simplesoftwareio\simple-qrcode\src\Generator.php(205): file_get_contents('img/logo.png')
+ 3 APPPATH\Controllers\QrCodeGenerator_.php(22): SimpleSoftwareIO\QrCode\Generator->merge('img/logo.png', 0.4)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\QrCodeGenerator_->QrCodeGenerator()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QrCodeGenerator_))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-26 15:44:30 --> BaconQrCode\Exception\RuntimeException: You need to install the imagick extension to use this back end
+[Method: GET, Route: GenerateQrCode]
+in FCPATH\core\vendor\bacon\bacon-qr-code\src\Renderer\Image\ImagickImageBackEnd.php on line 64.
+ 1 FCPATH\core\vendor\simplesoftwareio\simple-qrcode\src\Generator.php(464): BaconQrCode\Renderer\Image\ImagickImageBackEnd->__construct('png')
+ 2 FCPATH\core\vendor\simplesoftwareio\simple-qrcode\src\Generator.php(440): SimpleSoftwareIO\QrCode\Generator->getFormatter()
+ 3 FCPATH\core\vendor\simplesoftwareio\simple-qrcode\src\Generator.php(171): SimpleSoftwareIO\QrCode\Generator->getRenderer()
+ 4 APPPATH\Controllers\QrCodeGenerator_.php(22): SimpleSoftwareIO\QrCode\Generator->generate('https://www.binaryboxtuts.com/')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\QrCodeGenerator_->QrCodeGenerator()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QrCodeGenerator_))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-26 15:54:12 --> BaconQrCode\Exception\RuntimeException: You need to install the imagick extension to use this back end
+[Method: GET, Route: GenerateQrCode]
+in FCPATH\core\vendor\bacon\bacon-qr-code\src\Renderer\Image\ImagickImageBackEnd.php on line 64.
+ 1 FCPATH\core\vendor\simplesoftwareio\simple-qrcode\src\Generator.php(464): BaconQrCode\Renderer\Image\ImagickImageBackEnd->__construct('png')
+ 2 FCPATH\core\vendor\simplesoftwareio\simple-qrcode\src\Generator.php(440): SimpleSoftwareIO\QrCode\Generator->getFormatter()
+ 3 FCPATH\core\vendor\simplesoftwareio\simple-qrcode\src\Generator.php(171): SimpleSoftwareIO\QrCode\Generator->getRenderer()
+ 4 APPPATH\Controllers\QrCodeGenerator_.php(22): SimpleSoftwareIO\QrCode\Generator->generate('https://www.binaryboxtuts.com/')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\QrCodeGenerator_->QrCodeGenerator()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QrCodeGenerator_))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-26 16:00:54 --> Exception: Could not read logo image data from path "C:\xampp\htdocs\project\EventRegistrasi\indaacSumut2025\/logo.png": file_get_contents(C:\xampp\htdocs\project\EventRegistrasi\indaacSumut2025\/logo.png): Failed to open stream: No such file or directory
+[Method: GET, Route: GenerateQrCode]
+in FCPATH\core\vendor\endroid\qr-code\src\ImageData\LogoImageData.php on line 28.
+ 1 FCPATH\core\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php(131): Endroid\QrCode\ImageData\LogoImageData::createForLogo(Object(Endroid\QrCode\Logo\Logo))
+ 2 FCPATH\core\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php(119): Endroid\QrCode\Writer\AbstractGdWriter->addLogo(Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Writer\Result\GdResult))
+ 3 FCPATH\core\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label), [...])
+ 4 APPPATH\Controllers\QrCodeGenerator_.php(39): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\QrCodeGenerator_->QrCodeGenerator()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QrCodeGenerator_))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-26 16:06:06 --> CodeIgniter\Files\Exceptions\FileNotFoundException: File not found: "data:image/png;base64,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"
+[Method: GET, Route: GenerateQrCode]
+in SYSTEMPATH\Files\File.php on line 51.
+ 1 SYSTEMPATH\Files\File.php(51): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('data:image/png;base64,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')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(106): CodeIgniter\Files\File->__construct('data:image/png;base64,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', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(739): CodeIgniter\HTTP\DownloadResponse->setFilePath('data:image/png;base64,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')
+ 4 APPPATH\Controllers\QrCodeGenerator_.php(42): CodeIgniter\HTTP\Response->download('++83ptV7OG2+8UVxcPH369MTExHnz5j388MMD3hIrC88HBgSL05NYgDsQYEAwAgwIRoABwQgwIBgBBgQjwIBgBBgQjAADgv0XCBXVa3Fm+L0AAAAASUVORK5CYII=', null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\QrCodeGenerator_->QrCodeGenerator()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QrCodeGenerator_))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-26 16:13:19 --> ErrorException: file_put_contents(http://localhost/project/EventRegistrasi/indaacSumut2025//qrcode.png): Failed to open stream: HTTP wrapper does not support writeable connections
+[Method: GET, Route: GenerateQrCode]
+in FCPATH\core\vendor\endroid\qr-code\src\Writer\Result\AbstractResult.php on line 29.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(http://localhost/project/EventRegistrasi/indaacSumut2025//qrcode.png): Failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\xampp\\htdocs\\project\\EventRegistrasi\\indaacSumut2025\\core\\vendor\\endroid\\qr-code\\src\\Writer\\Result\\AbstractResult.php', 29)
+ 2 FCPATH\core\vendor\endroid\qr-code\src\Writer\Result\AbstractResult.php(29): file_put_contents('http://localhost/project/EventRegistrasi/indaacSumut2025//qrcode.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . '@' . "\0" . '' . "\0" . ']' . "\0" . '' . "\0" . '' . "\0" . 'ýº#¸' . "\0" . '' . "\0" . '' . "\0" . '	pHYs' . "\0" . '' . "\0" . 'Ä' . "\0" . '' . "\0" . 'Ä•+' . "\0" . '' . "\0" . 'àIDATxœíÝ}luÇñß.K-ËRêQji±öj…¦¢ìÕª„#>TìÑ^mT$ÚøÐôLî<Ñ»ã<Â%÷À#ŠDïšz1HÐ' . "\0" . 'r5hjKÔŠJ¡*ö*"WZ(û4÷Ç/·™Û>M·³L¿³ï×Mwvö7ó›™Ïþæé·ã1CÉëô' . "\0" . 'ˆ#À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Ìgq<ÇÓùpë=CÜ·<ã¹î±`qyÒ‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0F€Á0 ˜ÕÞHÖ¹ïY-RzÏ¸¯?ÛÒ°hÁ0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`ÌþÞHÖ9Û\'ÆÙž.±è9‹å)¥?PÜnK´À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0ædo$ØËÙNRú-¹-0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚ÑÉÎöò‰E¿%8‚Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0F€ÁœìÄÓtì‹NRÖ‘”ù´-0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚Ùß‰§é¸‰³Ïpb[-0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚yâö¡2Î’ÒÏ†ÍcŒ£#À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0«ÏFr¶÷Œ”çî¸¯ïŽ”^SÖ¹l[¢#À€`Œ' . "\0" . '‚`@0F€Á0 ˜Õ9 È”)S‚Á`zzzbbbgggssóÑ£GÛÛÛž/Ø' . "\0" . '»„ÇãY¸pá]wÝuûí·ƒÁqãÆ™ßííímhhØµkWuuõñãÇšIØÏ°FÄLŽˆ³óiãD=ÏwÜQ[[keº===¯¼òÊÜ¹smœY¢Ý^.ÑÚé|`gæÓ®)fddüë_ÿê_~OOO[[[kkkGGGÿw;;;{ì1÷ÝçlEô[Lì×fóI€™O[&
+…ZZZÌÅ~öÙg¿ûÝïòòò&Ož¬Ç?~ü•W^YTT´yóæS§N™G~õÕW\'L˜`ËœbÏÖƒµÝ|Æ¤>V§í(+nKÝóòòÚÚÚÂ;vì§?ýéÐê„	}ôQó§z{{ûúúœX' . "\0" . 'Ž±¾„žSKœ|¸™ûº(Z7ÊºÏ˜1£®®nêÔ©úeuuueeåùóç­|vöìÙáèëëózãèj¢õ%ïìbvÆhêîñxÞ{ï½›nºI¿üãÿøÄOŒ¨„¾¾>ó<ÄU†]àxYmnrï½÷†Ó»mÛ¶_ÿú×#-!b#öxxÊ¬T´ÀÎˆºîãÇollœ1c†Rêë¯¿ž?~whèº›Þøi„iá¤;ï¼S§W)µvíÚÑÜ_enxãó’’Ð;#êº¿ýöÛK–,QJ}ñÅsçÎííí¢pÝÍ¯añcZ`8fêÔ©á£ß—^z)ºôš™·fÛ+"`I~üã?^ÿÿúë¯¾@N_IG€%¹á†ô?çÎ;|ø°-eêKJJ©89‰å2¬3Irrrô?GŽéîî¶¥LóÕ`[
+Ä¥D€%	÷"jll´¥À89qåbXŒ	&¤¤¤èÿ¿úê+»Š%À¢`1ü~ÿe—]¦ÿ?uê”-e†Ï`Ñeõ$d,®ž¹o‹‰EÝ¼f;àS#-ÓÚKy\'–³Wb}&–íu§iôa‹Ø>Ü÷e\'°6Þt¡?nn~	°PX»26{ölóÎ3G¿¢`‘¢‹\\FFÆŸÿüç?þØ|,uiøYY÷»âŠ+
+
+
+JKKo¹å–ðylõ¿¶—ôŠF€ÝfÜ¸qS§N;wnNNNnnn^^ÞUW]ñ3ÑêÇ½¤W:ì*ãÇÿâ‹/222áÌ™3/¾øâ£>ÊÏîÀZt•îîîW^y¥ÿð3gÎlß¾}ÅŠW^yeÜþ"´+q#‡¼ .sÚ´i\'NTJµ··ÿêW¿ª­­­¯¯7w–òcÜÈ1,Z`·ùæ›o6oÞ¬ÿŸ<yò‰\'<8ú®ÿ›hí4Z`¥ÔäÉ“?>eÊ¥ÔñãÇçÏŸáÂ…èÊŒZ`Ë¤v¡ööößüæ7úÿÙ³g‡ÿ‡ûÐÛiŒ´ÀJ©qãÆíß¿?//O)ÕÝÝ}Ã7ÔÕÕEQf,ÐÛX¦ý¶NJÔÇÈ|†B¡>úHÿ_TT´{÷îˆ"æ3â\'£›=)¿áèìöé v¡]Ëëõ†%‡¯s+ìfæÜšó× Àn¦w,Í_ vìrýŸŸB†Ý„' . "\0" . '»_ÿƒa2ì8.x<ó¸`× ÀbŒ&uºç \'´Ü‡' . "\0" . 'Ç‹ˆg2ìXŒÑß«Ñ˜}i À"E<}0lþ8í°h8î˜ÛaÇC;,ŽGwtpƒ‡\\8Nõ-–ÈêÚÅ¢GŽ³]-ÓºðÔ?ùä“ººº…ÚXò°½”œíÐg}êÎnŸ±@‡~·9þüõ×_¿jÕªÃ‡ÛU¦Î0?ï.—ý?Rz‹kÍC|>_ww÷%˜z,Œµå96Ñ»–aýÓ‹øD€Á0 #À€`Œ' . "\0" . '‚`@0F€Á0 ˜ÕÞHÖ9{Gn,¦î¾;ryT"î-§#À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0«½‘Ü××$bñ,gIyÎ†¶÷£#À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0·=)bÑ\'&O\'Š…Xô’RwhÁ0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`ÌþÞHÖ9ûä÷õò‰Eœ]Gî{2“íëˆŒ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0F€Áœì§HyæP,zb9[¦íhÁ0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`ŒÞHÎpö™CÎŠEÝ}‚”u¶Ï\'-0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚9ÙIÊzœå²Þ3#Ó:ëó)¥ß’E´À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0fo¤x~êO,8Û{ÆÙžCîë‰e{:hÁ0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Ì#â0' . "\0" . 'DF€Á0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`øÿ´··ûí·ÝÝÝNÏ`‰ì' . "\0" . 'ÿûßÿ¾êª«~ô£}ÿý÷¶¸råÊ´´´ÚÚZ[JbMv€>ûì³ÚÚÚ/¿ü2ÖÓZ¸p¡Çã¹í¶ÛF?Ú…þú×¿^ýõS¦L™4iÒµ×^û·¿ý­··wè’¿ûî»Gyäšk®™4iÒ´iÓ~ò“Ÿ¼ùæ›#®Æ¥òí·ß~ðÁçÎz´¯¾úê¡‡š1cÆÄ‰¯¹æšµk×^¸p¡ÿh‡¾ûî»322~øÃ>ðÀß|óMåÜ~ûíž~.¿üòÑTÓy†pÕÕÕ»wï¶«´ÂÂB¥Ôþýû#†ë/ˆ””ŸÏwúôéÁ>ne´úúúÌÌL½ð333sss}>ŸRêÆolii¬ä†††ääd¥Tjjj~~~zzº.áÁìììŒ®²1µiÓ¦—¤Ù»ï¾«—ÕÍ7ß\\ZZªKvvvDjkkðƒ$$$äçç{½Þ`0ØÜÜ<ÒrB¡Rª¤¤¤ÔdÕªUöVü`{à?ýéOJ©^xAÿìãÃŽÖÚÚš’’¢”*..Çµ££cÍš5™™™\'Ož¬äììl¥ÔÆ{zzô¦¦¦ÂÂÂ¼¼¼‹/Ž¸ž±·nÝº¡ÜÕÕ•••5sæÌ#GŽè!/^,..VJ­[·Î<Zff¦ÏçÛ·oŸòôÓO+¥–/_>¢rÃƒ~¿ßÆ:Žøÿ,[¶lÀÍ.
+eggwuu%%%öñaGûÅ/~¡”*//ïÿVGGÇ`Åê†}Îœ9ýß›Í¯a•••Ã¶ÀÍÍÍßYº¦,Ù±c‡R*¢ÌÍÍMHHïãX)Ç0Œ”””Y³fEW1Kv€;::”RÓ§ORYYiÆ¶mÛB¡P ÈÊÊÚ°aCÿ·´´”——ƒÁ”””¥K—îß¿åÊ•ý7;½5¬^½Ú0ŒÒÒRŸÏ×ÚÚÚ¿´aG;vì˜ÏçóûýC´´:tèRjØO¶xñâˆázß;üÒ¼ˆ¶lÙ’í÷ûsrrÂG"UUUóæÍ¡PhïÞ½#ÄÖ­[“’’¼Þÿ;½RUUe±²@ „_–——+¥^{í5ó8¿ýío•RÏ>û¬õrÃðù|yyygC
+Ù\'±sâÄ‰Ÿýìg+V¬8yòdVVÖ±cÇÖ­[÷‡?üÁ<N]]Ý‚þþ÷¿wvv†B¡£G.Z´hß¾}ýKÓÀÒ¥K•R………===;wîŒb´Ý»w÷ôô”••]qÅ#ªNvvvrrrSSÓïÿûaÏuYÔÒÒòÐCUTTx½Þôôôúúú²²²ÆÆÆGyäÞ{ïíëëKOO¯­­]ºti]]ÝˆJž3gNYYÙôéÓ•RÅÅÅYYYV>{æÌ™ŽŽŽð9¥TCCƒRêºë®3¦fëëë­—sîÜ¹žžžÔÔÔƒ>ÿüóÿøÇ?FZ¯1ÊéoQ¬ÖkjjôÀ×^{M)•’’­§§gÞ¼yJ©5kÖ„îØ±C F´Àºïêê2ãäÉ“^¯wÀÝãaG+++SJmÚ´)Šš¾üòËºMƒÕÕÕ÷Ž¨VJÍœ9óÐ¡Cz nè@ffæôÀ|P)µråÊ‘NÂülÂÐÞzë-¥TYYYxˆ>]q¤PSS£”Zºt©õrNœ8¡”JLL4oüK–,ùòË/G4‡c;œœœqFW‡÷]«ªª”R7ÞxcDý7;½âÃ§LÃ…B			»ÇVF»õÖ[•R;wîŒ®²{÷î·c©©©ëÖ­‹˜‡899Ù¼\'¯[3¿ßo>»{äÈ¥TnnîH\'aD`ý)ó"JJJJLLŒíèÑ£J©E‹Y/çìÙ³Ë–-«¬¬¬¯¯ïèè8pà€^ùùù#šÃ±Æ»Ð@`Ú´iæ!:ÀÍÍÍúåþýû•RúDËÐ¶oß®”Òg5µeË–uuuEì[­¯¯/ü7
+·ÝvÛ§Ÿ~ºsçÎ%K–œ:ujÃ†³fÍzýõ×£+-˜÷äõòñûýÃ-ÖÞ~ûí={ö„B¡¢¢¢ðÀ„„„Á–XDs:t9“&MÚµk×æÍ›çÏŸ?qâÄk¯½ö7ÞÈÊÊúðÃwíÚeoE.%ŸÓ3p‰è•ÝÓÓ£_ê¶ÅÊ™>²Ý»wï‡~¨‡èzÇŽ÷ÝwßˆFÓûç£¼ç¤¨¨¨¨¨¨®®nõêÕï¿ÿ~IIÉ¡C‡®¾úêÑ”©	CÄB‹©öööÊÊJ¯×û—¿üÅ<<==ýôéÓçÏŸŸ8qbxàéÓ§•RiiiÖËéoÜ¸qååå?þx}}½9ê²ÄK€#œ={V)¥ï Â×_­o«¬®®Žxkß¾}gÎœÑ÷ñX-77wÛ¶mú»c”.\\øÞ{ïÝsÏ=ÿüç?Ÿyæ™çž{nôe:¨···´´ôèÑ£7n¼é¦›Ìo¥¥¥Õ××·¶¶šÜÚÚª”
+ßÍb¥œÍš5K)ÕÔÔdCâÎ]èaé5§\\‡°cÇŽ¾¾¾gžy&âÀã—¿üeWW×îÝ»G4Zaa¡×ëÝ¶mÛþó[j¡/z;vL¿ÔßG]]]¶> Mâá‡Þ·o_qqñÚµk#ÞÒk*âît}kæÌ™ÖËPKKË€å§Ö76éý^³ˆMSÙê3"fzˆ~×úhW_}uyyyGG‡¾ŒáàÁƒƒÍíwß}÷ÒK/õ®¿€‚Á ~©w)#Y?ÿüóÎÎÎÁJ)ë“ðûýJ©‹/[æÏþó-[¶,Z´èå—_îÿ®>ÕþÔöìÙ~Ëb9Çï?P›››;ìLŽ]—êlYLvÚ<D»ùæ›•RáKÍÍÍ‰‰‰			æ•kÖ¬ÑËDŸ;=qâ„×ëÍÉÉé?]}¯UBBB[[›ÅÑô“\'O&%%)¥ÊÊÊÂ7uttlÜ¸Ñçó™¯i™(¥Š‹‹Í×<jjjÒÒÒ¼^ï;ï¼˜ššª”Ú³g~yàÀÌÌL}ýièE¤“f¾Òf†>úMNN6´2	Ã0V¯^­”Z¿~ý€5
+Ó—¯òóó»­««kÖ¬Y>Ÿïý÷ß×C¶lÙ¢”*,,´^NSSSRRÒªU«Îž=¸qãF¥Tnn®¾ò\'TœØ0ŒM›6y½^¯×
+…JJJÒÒÒRRR–,Y°¾?â~Ú°åË—+¥ªªª,ŽRSS£3 ”
+ƒ,Ðû¥™™™ÒÜÜ¬ç_)•½xñbÝêz½Þˆ;Ì6lØ ”JHHX¼x±ÞËX¿~½n©†^DÖleÆÿ®Ky½Þ’’’’’’­[·¶p¼^oyyyyyùòåËÃ}ÌËówÞIHHðûý%%%·Þz«ÏçKIIijj²^NgggEE…R*¬X±B/ÀÔÔÔúúú—¹ñ`Ã0öîÝ[PPšš+**š››·nÝp~~¾Rª¶¶vÀIëóU………G3lkk[¿~}nn®¾Ý/\'\'çÉ\'Ÿ47ªªª*((HKKKLLÌÊÊZ¾|yøŽ³\'Ÿ|2++Ëï÷_wÝuÛ·o7cÅŠ6ØÊ$´;w.X° Ì›7ï©§žŠx·­­mˆÃˆKô555eeeééésæÌ¹ÿþûÍéµ^Îo¼Q\\\\<}úôÄÄÄyóæ=üðÃÞ+Ï‹Ó“X€;`@0F€Á0 #À€`Œ' . "\0" . '‚ýÕkqfø½' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 APPPATH\Controllers\QrCodeGenerator_.php(43): Endroid\QrCode\Writer\Result\AbstractResult->saveToFile('http://localhost/project/EventRegistrasi/indaacSumut2025//qrcode.png')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\QrCodeGenerator_->QrCodeGenerator()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QrCodeGenerator_))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-26 16:13:29 --> ErrorException: file_put_contents(http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png): Failed to open stream: HTTP wrapper does not support writeable connections
+[Method: GET, Route: GenerateQrCode]
+in FCPATH\core\vendor\endroid\qr-code\src\Writer\Result\AbstractResult.php on line 29.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png): Failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\xampp\\htdocs\\project\\EventRegistrasi\\indaacSumut2025\\core\\vendor\\endroid\\qr-code\\src\\Writer\\Result\\AbstractResult.php', 29)
+ 2 FCPATH\core\vendor\endroid\qr-code\src\Writer\Result\AbstractResult.php(29): file_put_contents('http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . '@' . "\0" . '' . "\0" . ']' . "\0" . '' . "\0" . '' . "\0" . 'ýº#¸' . "\0" . '' . "\0" . '' . "\0" . '	pHYs' . "\0" . '' . "\0" . 'Ä' . "\0" . '' . "\0" . 'Ä•+' . "\0" . '' . "\0" . 'àIDATxœíÝ}luÇñß.K-ËRêQji±öj…¦¢ìÕª„#>TìÑ^mT$ÚøÐôLî<Ñ»ã<Â%÷À#ŠDïšz1HÐ' . "\0" . 'r5hjKÔŠJ¡*ö*"WZ(û4÷Ç/·™Û>M·³L¿³ï×Mwvö7ó›™Ïþæé·ã1CÉëô' . "\0" . 'ˆ#À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Ìgq<ÇÓùpë=CÜ·<ã¹î±`qyÒ‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0F€Á0 ˜ÕÞHÖ¹ïY-RzÏ¸¯?ÛÒ°hÁ0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`ÌþÞHÖ9Û\'ÆÙž.±è9‹å)¥?PÜnK´À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0ædo$ØËÙNRú-¹-0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚ÑÉÎöò‰E¿%8‚Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0F€ÁœìÄÓtì‹NRÖ‘”ù´-0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚Ùß‰§é¸‰³Ïpb[-0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚yâö¡2Î’ÒÏ†ÍcŒ£#À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0«ÏFr¶÷Œ”çî¸¯ïŽ”^SÖ¹l[¢#À€`Œ' . "\0" . '‚`@0F€Á0 ˜Õ9 È”)S‚Á`zzzbbbgggssóÑ£GÛÛÛž/Ø' . "\0" . '»„ÇãY¸pá]wÝuûí·ƒÁqãÆ™ßííímhhØµkWuuõñãÇšIØÏ°FÄLŽˆ³óiãD=ÏwÜQ[[keº===¯¼òÊÜ¹smœY¢Ý^.ÑÚé|`gæÓ®)fddüë_ÿê_~OOO[[[kkkGGGÿw;;;{ì1÷ÝçlEô[Lì×fóI€™O[&
+…ZZZÌÅ~öÙg¿ûÝïòòò&Ož¬Ç?~ü•W^YTT´yóæS§N™G~õÕW\'L˜`ËœbÏÖƒµÝ|Æ¤>V§í(+nKÝóòòÚÚÚÂ;vì§?ýéÐê„	}ôQó§z{{ûúúœX' . "\0" . 'Ž±¾„žSKœ|¸™ûº(Z7ÊºÏ˜1£®®nêÔ©úeuuueeåùóç­|vöìÙáèëëózãèj¢õ%ïìbvÆhêîñxÞ{ï½›nºI¿üãÿøÄOŒ¨„¾¾>ó<ÄU†]àxYmnrï½÷†Ó»mÛ¶_ÿú×#-!b#öxxÊ¬T´ÀÎˆºîãÇollœ1c†Rêë¯¿ž?~whèº›Þøi„iá¤;ï¼S§W)µvíÚÑÜ_enxãó’’Ð;#êº¿ýöÛK–,QJ}ñÅsçÎííí¢pÝÍ¯añcZ`8fêÔ©á£ß—^z)ºôš™·fÛ+"`I~üã?^ÿÿúë¯¾@N_IG€%¹á†ô?çÎ;|ø°-eêKJJ©89‰å2¬3Irrrô?GŽéîî¶¥LóÕ`[
+Ä¥D€%	÷"jll´¥À89qåbXŒ	&¤¤¤èÿ¿úê+»Š%À¢`1ü~ÿe—]¦ÿ?uê”-e†Ï`Ñeõ$d,®ž¹o‹‰EÝ¼f;àS#-ÓÚKy\'–³Wb}&–íu§iôa‹Ø>Ü÷e\'°6Þt¡?nn~	°PX»26{ölóÎ3G¿¢`‘¢‹\\FFÆŸÿüç?þØ|,uiøYY÷»âŠ+
+
+
+JKKo¹å–ðylõ¿¶—ôŠF€ÝfÜ¸qS§N;wnNNNnnn^^ÞUW]ñ3ÑêÇ½¤W:ì*ãÇÿâ‹/222áÌ™3/¾øâ£>ÊÏîÀZt•îîîW^y¥ÿð3gÎlß¾}ÅŠW^yeÜþ"´+q#‡¼ .sÚ´i\'NTJµ··ÿêW¿ª­­­¯¯7w–òcÜÈ1,Z`·ùæ›o6oÞ¬ÿŸ<yò‰\'<8ú®ÿ›hí4Z`¥ÔäÉ“?>eÊ¥ÔñãÇçÏŸáÂ…èÊŒZ`Ë¤v¡ööößüæ7úÿÙ³g‡ÿ‡ûÐÛiŒ´ÀJ©qãÆíß¿?//O)ÕÝÝ}Ã7ÔÕÕEQf,ÐÛX¦ý¶NJÔÇÈ|†B¡>úHÿ_TT´{÷îˆ"æ3â\'£›=)¿áèìöé v¡]Ëëõ†%‡¯s+ìfæÜšó× Àn¦w,Í_ vìrýŸŸB†Ý„' . "\0" . '»_ÿƒa2ì8.x<ó¸`× ÀbŒ&uºç \'´Ü‡' . "\0" . 'Ç‹ˆg2ìXŒÑß«Ñ˜}i À"E<}0lþ8í°h8î˜ÛaÇC;,ŽGwtpƒ‡\\8Nõ-–ÈêÚÅ¢GŽ³]-ÓºðÔ?ùä“ººº…ÚXò°½”œíÐg}êÎnŸ±@‡~·9þüõ×_¿jÕªÃ‡ÛU¦Î0?ï.—ý?Rz‹kÍC|>_ww÷%˜z,Œµå96Ñ»–aýÓ‹øD€Á0 #À€`Œ' . "\0" . '‚`@0F€Á0 ˜ÕÞHÖ9{Gn,¦î¾;ryT"î-§#À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0«½‘Ü××$bñ,gIyÎ†¶÷£#À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0·=)bÑ\'&O\'Š…Xô’RwhÁ0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`ÌþÞHÖ9ûä÷õò‰Eœ]Gî{2“íëˆŒ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0F€Áœì§HyæP,zb9[¦íhÁ0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`ŒÞHÎpö™CÎŠEÝ}‚”u¶Ï\'-0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚9ÙIÊzœå²Þ3#Ó:ëó)¥ß’E´À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Œ' . "\0" . '‚`@0fo¤x~êO,8Û{ÆÙžCîë‰e{:hÁ0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`Ì#â0' . "\0" . 'DF€Á0 #À€`Œ' . "\0" . '‚`@0F€Á0 #À€`øÿ´··ûí·ÝÝÝNÏ`‰ì' . "\0" . 'ÿûßÿ¾êª«~ô£}ÿý÷¶¸råÊ´´´ÚÚZ[JbMv€>ûì³ÚÚÚ/¿ü2ÖÓZ¸p¡Çã¹í¶ÛF?Ú…þú×¿^ýõS¦L™4iÒµ×^û·¿ý­··wè’¿ûî»Gyäšk®™4iÒ´iÓ~ò“Ÿ¼ùæ›#®Æ¥òí·ß~ðÁçÎz´¯¾úê¡‡š1cÆÄ‰¯¹æšµk×^¸p¡ÿh‡¾ûî»322~øÃ>ðÀß|óMåÜ~ûíž~.¿üòÑTÓy†pÕÕÕ»wï¶«´ÂÂB¥Ôþýû#†ë/ˆ””ŸÏwúôéÁ>ne´úúúÌÌL½ð333sss}>ŸRêÆolii¬ä†††ääd¥Tjjj~~~zzº.áÁìììŒ®²1µiÓ¦—¤Ù»ï¾«—ÕÍ7ß\\ZZªKvvvDjkkðƒ$$$äçç{½Þ`0ØÜÜ<ÒrB¡Rª¤¤¤ÔdÕªUöVü`{à?ýéOJ©^xAÿìãÃŽÖÚÚš’’¢”*..Çµ££cÍš5™™™\'Ož¬äììl¥ÔÆ{zzô¦¦¦ÂÂÂ¼¼¼‹/Ž¸ž±·nÝº¡ÜÕÕ•••5sæÌ#GŽè!/^,..VJ­[·Î<Zff¦ÏçÛ·oŸòôÓO+¥–/_>¢rÃƒ~¿ßÆ:Žøÿ,[¶lÀÍ.
+eggwuu%%%öñaGûÅ/~¡”*//ïÿVGGÇ`Åê†}Îœ9ýß›Í¯a•••Ã¶ÀÍÍÍßYº¦,Ù±c‡R*¢ÌÍÍMHHïãX)Ç0Œ”””Y³fEW1Kv€;::”RÓ§ORYYiÆ¶mÛB¡P ÈÊÊÚ°aCÿ·´´”——ƒÁ”””¥K—îß¿åÊ•ý7;½5¬^½Ú0ŒÒÒRŸÏ×ÚÚÚ¿´aG;vì˜ÏçóûýC´´:tèRjØO¶xñâˆázß;üÒ¼ˆ¶lÙ’í÷ûsrrÂG"UUUóæÍ¡PhïÞ½#ÄÖ­[“’’¼Þÿ;½RUUe±²@ „_–——+¥^{í5ó8¿ýío•RÏ>û¬õrÃðù|yyygC
+Ù\'±sâÄ‰Ÿýìg+V¬8yòdVVÖ±cÇÖ­[÷‡?üÁ<N]]Ý‚þþ÷¿wvv†B¡£G.Z´hß¾}ýKÓÀÒ¥K•R………===;wîŒb´Ý»w÷ôô”••]qÅ#ªNvvvrrrSSÓïÿûaÏuYÔÒÒòÐCUTTx½Þôôôúúú²²²ÆÆÆGyäÞ{ïíëëKOO¯­­]ºti]]ÝˆJž3gNYYÙôéÓ•RÅÅÅYYYV>{æÌ™ŽŽŽð9¥TCCƒRêºë®3¦fëëë­—sîÜ¹žžžÔÔÔƒ>ÿüóÿøÇ?FZ¯1ÊéoQ¬ÖkjjôÀ×^{M)•’’­§§gÞ¼yJ©5kÖ„îØ±C F´Àºïêê2ãäÉ“^¯wÀÝãaG+++SJmÚ´)Šš¾üòËºMƒÕÕÕ÷Ž¨VJÍœ9óÐ¡Cz nè@ffæôÀ|P)µråÊ‘NÂülÂÐÞzë-¥TYYYxˆ>]q¤PSS£”Zºt©õrNœ8¡”JLL4oüK–,ùòË/G4‡c;œœœqFW‡÷]«ªª”R7ÞxcDý7;½âÃ§LÃ…B			»ÇVF»õÖ[•R;wîŒ®²{÷î·c©©©ëÖ­‹˜‡899Ù¼\'¯[3¿ßo>»{äÈ¥TnnîH\'aD`ý)ó"JJJJLLŒíèÑ£J©E‹Y/çìÙ³Ë–-«¬¬¬¯¯ïèè8pà€^ùùù#šÃ±Æ»Ð@`Ú´iæ!:ÀÍÍÍúåþýû•RúDËÐ¶oß®”Òg5µeË–uuuEì[­¯¯/ü7
+·ÝvÛ§Ÿ~ºsçÎ%K–œ:ujÃ†³fÍzýõ×£+-˜÷äõòñûýÃ-ÖÞ~ûí={ö„B¡¢¢¢ðÀ„„„Á–XDs:t9“&MÚµk×æÍ›çÏŸ?qâÄk¯½ö7ÞÈÊÊúðÃwíÚeoE.%ŸÓ3p‰è•ÝÓÓ£_ê¶ÅÊ™>²Ý»wï‡~¨‡èzÇŽ÷ÝwßˆFÓûç£¼ç¤¨¨¨¨¨¨®®nõêÕï¿ÿ~IIÉ¡C‡®¾úêÑ”©	CÄB‹©öööÊÊJ¯×û—¿üÅ<<==ýôéÓçÏŸŸ8qbxàéÓ§•RiiiÖËéoÜ¸qååå?þx}}½9ê²ÄK€#œ={V)¥ï Â×_­o«¬®®Žxkß¾}gÎœÑ÷ñX-77wÛ¶mú»c”.\\øÞ{ïÝsÏ=ÿüç?Ÿyæ™çž{nôe:¨···´´ôèÑ£7n¼é¦›Ìo¥¥¥Õ××·¶¶šÜÚÚª”
+ßÍb¥œÍš5K)ÕÔÔdCâÎ]èaé5§\\‡°cÇŽ¾¾¾gžy&âÀã—¿üeWW×îÝ»G4Zaa¡×ëÝ¶mÛþó[j¡/z;vL¿ÔßG]]]¶> Mâá‡Þ·o_qqñÚµk#ÞÒk*âît}kæÌ™ÖËPKKË€å§Ö76éý^³ˆMSÙê3"fzˆ~×úhW_}uyyyGG‡¾ŒáàÁƒƒÍíwß}÷ÒK/õ®¿€‚Á ~©w)#Y?ÿüóÎÎÎÁJ)ë“ðûýJ©‹/[æÏþó-[¶,Z´èå—_îÿ®>ÕþÔöìÙ~Ëb9Çï?P›››;ìLŽ]—êlYLvÚ<D»ùæ›•RáKÍÍÍ‰‰‰			æ•kÖ¬ÑËDŸ;=qâ„×ëÍÉÉé?]}¯UBBB[[›ÅÑô“\'O&%%)¥ÊÊÊÂ7uttlÜ¸Ñçó™¯i™(¥Š‹‹Í×<jjjÒÒÒ¼^ï;ï¼˜ššª”Ú³g~yàÀÌÌL}ýièE¤“f¾Òf†>úMNN6´2	Ã0V¯^­”Z¿~ý€5
+Ó—¯òóó»­««kÖ¬Y>Ÿïý÷ß×C¶lÙ¢”*,,´^NSSSRRÒªU«Îž=¸qãF¥Tnn®¾ò\'TœØ0ŒM›6y½^¯×
+…JJJÒÒÒRRR–,Y°¾?â~Ú°åË—+¥ªªª,ŽRSS£3 ”
+ƒ,Ðû¥™™™ÒÜÜ¬ç_)•½xñbÝêz½Þˆ;Ì6lØ ”JHHX¼x±ÞËX¿~½n©†^DÖleÆÿ®Ky½Þ’’’’’’­[·¶p¼^oyyyyyùòåËÃ}ÌËówÞIHHðûý%%%·Þz«ÏçKIIijj²^NgggEE…R*¬X±B/ÀÔÔÔúúú—¹ñ`Ã0öîÝ[PPšš+**š››·nÝp~~¾Rª¶¶vÀIëóU………G3lkk[¿~}nn®¾Ý/\'\'çÉ\'Ÿ47ªªª*((HKKKLLÌÊÊZ¾|yøŽ³\'Ÿ|2++Ëï÷_wÝuÛ·o7cÅŠ6ØÊ$´;w.X° Ì›7ï©§žŠx·­­mˆÃˆKô555eeeééésæÌ¹ÿþûÍéµ^Îo¼Q\\\\<}úôÄÄÄyóæ=üðÃÞ+Ï‹Ó“X€;`@0F€Á0 #À€`Œ' . "\0" . '‚ýÕkqfø½' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 APPPATH\Controllers\QrCodeGenerator_.php(43): Endroid\QrCode\Writer\Result\AbstractResult->saveToFile('http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\QrCodeGenerator_->QrCodeGenerator()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QrCodeGenerator_))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-26 16:16:14 --> CodeIgniter\Files\Exceptions\FileNotFoundException: File not found: "http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png"
+[Method: GET, Route: GenerateQrCode]
+in SYSTEMPATH\Files\File.php on line 51.
+ 1 SYSTEMPATH\Files\File.php(51): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(106): CodeIgniter\Files\File->__construct('http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(739): CodeIgniter\HTTP\DownloadResponse->setFilePath('http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png')
+ 4 APPPATH\Controllers\QrCodeGenerator_.php(44): CodeIgniter\HTTP\Response->download('qrcode.png', null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\QrCodeGenerator_->QrCodeGenerator()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QrCodeGenerator_))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-26 16:17:19 --> CodeIgniter\Files\Exceptions\FileNotFoundException: File not found: "http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png"
+[Method: GET, Route: GenerateQrCode]
+in SYSTEMPATH\Files\File.php on line 51.
+ 1 SYSTEMPATH\Files\File.php(51): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(106): CodeIgniter\Files\File->__construct('http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(739): CodeIgniter\HTTP\DownloadResponse->setFilePath('http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png')
+ 4 APPPATH\Controllers\QrCodeGenerator_.php(44): CodeIgniter\HTTP\Response->download('qrcode.png', null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\QrCodeGenerator_->QrCodeGenerator()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QrCodeGenerator_))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-26 16:17:52 --> CodeIgniter\Files\Exceptions\FileNotFoundException: File not found: "http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png"
+[Method: GET, Route: GenerateQrCode]
+in SYSTEMPATH\Files\File.php on line 51.
+ 1 SYSTEMPATH\Files\File.php(51): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(106): CodeIgniter\Files\File->__construct('http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(739): CodeIgniter\HTTP\DownloadResponse->setFilePath('http://localhost/project/EventRegistrasi/indaacSumut2025/qrcode.png')
+ 4 APPPATH\Controllers\QrCodeGenerator_.php(44): CodeIgniter\HTTP\Response->download('qrcode.png', null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\QrCodeGenerator_->QrCodeGenerator()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QrCodeGenerator_))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-26 16:18:42 --> CodeIgniter\Files\Exceptions\FileNotFoundException: File not found: "http://localhost/project/EventRegistrasi/indaacSumut2025/uploads/qrcode.png"
+[Method: GET, Route: GenerateQrCode]
+in SYSTEMPATH\Files\File.php on line 51.
+ 1 SYSTEMPATH\Files\File.php(51): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('http://localhost/project/EventRegistrasi/indaacSumut2025/uploads/qrcode.png')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(106): CodeIgniter\Files\File->__construct('http://localhost/project/EventRegistrasi/indaacSumut2025/uploads/qrcode.png', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(739): CodeIgniter\HTTP\DownloadResponse->setFilePath('http://localhost/project/EventRegistrasi/indaacSumut2025/uploads/qrcode.png')
+ 4 APPPATH\Controllers\QrCodeGenerator_.php(44): CodeIgniter\HTTP\Response->download('qrcode.png', null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\QrCodeGenerator_->QrCodeGenerator()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QrCodeGenerator_))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-26 16:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 16:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 16:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 16:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:08:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 17:26:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-26 18:10:55 --> ErrorException: Undefined array key "messages"
+[Method: POST, Route: KonfirmasiKehadiran]
+in APPPATH\Controllers\Peserta_.php on line 187.
+ 1 APPPATH\Controllers\Peserta_.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "messages"', 'C:\\xampp\\htdocs\\project\\EventRegistrasi\\indaacSumut2025\\core\\app\\Controllers\\Peserta_.php', 187)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Peserta_->konfirmasiKehadiran()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta_))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-26 18:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-26 18:11:54 --> ParseError: syntax error, unexpected token ";", expecting ")"
+[Method: POST, Route: KonfirmasiKehadiran]
+in APPPATH\Controllers\Peserta_.php on line 158.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\project\\EventRegistrasi\\indaacSumut2025\\core\\app\\Controllers\\Peserta_.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Peserta_')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Peserta_')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Peserta_', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-26 18:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:43:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:43:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:43:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:51:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:56:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:58:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-26 18:58:56 --> ErrorException: Undefined variable $dataOperator
+[Method: GET, Route: ScanBarcodeRegister]
+in APPPATH\Views\scanBarcodeRegister.php on line 23.
+ 1 APPPATH\Views\scanBarcodeRegister.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataOperator', 'C:\\xampp\\htdocs\\project\\EventRegistrasi\\indaacSumut2025\\core\\app\\Views\\scanBarcodeRegister.php', 23)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\project\\EventRegistrasi\\indaacSumut2025\\core\\app\\Views\\scanBarcodeRegister.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('scanBarcodeRegister', [], true)
+ 5 APPPATH\Controllers\Page.php(207): view('scanBarcodeRegister')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Page->scanBarcodeRegister()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-26 18:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 18:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:00:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:01:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:02:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:02:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-26 19:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

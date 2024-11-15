@@ -1,0 +1,14 @@
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\bin\Debug\net7.0\APIHaloKominfoInternal.exe
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\bin\Debug\net7.0\APIHaloKominfoInternal.deps.json
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\bin\Debug\net7.0\APIHaloKominfoInternal.runtimeconfig.json
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\bin\Debug\net7.0\APIHaloKominfoInternal.dll
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\bin\Debug\net7.0\APIHaloKominfoInternal.pdb
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\obj\Debug\net7.0\APIHaloKominfoInternal.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\obj\Debug\net7.0\APIHaloKominfoInternal.AssemblyInfoInputs.cache
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\obj\Debug\net7.0\APIHaloKominfoInternal.AssemblyInfo.cs
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\obj\Debug\net7.0\APIHaloKominfoInternal.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\obj\Debug\net7.0\APIHaloKominfoInternal.dll
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\obj\Debug\net7.0\refint\APIHaloKominfoInternal.dll
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\obj\Debug\net7.0\APIHaloKominfoInternal.pdb
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\obj\Debug\net7.0\APIHaloKominfoInternal.genruntimeconfig.cache
+C:\xampp\htdocs\kantor\APIHaloKominfoInternal\obj\Debug\net7.0\ref\APIHaloKominfoInternal.dll
