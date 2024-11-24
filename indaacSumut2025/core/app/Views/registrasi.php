@@ -68,29 +68,81 @@ $session    = session();
                                                     <div class="invalid-feedback">Masukkan Nomor Induk Kependudukan
                                                     </div>
                                                 </div>
-                                                <label for="yourUsername" class="form-label">Nama </label><span
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <label for="yourUsername" class="form-label">Gelar Depan
+                                                        </label>
+                                                        <div class="input-group has-validation">
+                                                            <input type="text" name="gelarDepan" class="form-control"
+                                                                id="yourUsername" placeholder="Masukkan Gelar Depan">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label for="yourUsername" class="form-label">Nama Depan
+                                                        </label><span style="color: red; font-size:10px;">*</span>
+                                                        <div class="input-group has-validation">
+                                                            <input type="text" name="namaDepan" class="form-control"
+                                                                id="yourUsername" placeholder="Masukkan Nama Depan"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <label for="yourUsername" class="form-label">Nama Belakang
+                                                        </label><span style="color: red; font-size:10px;">*</span>
+                                                        <div class="input-group has-validation">
+                                                            <input type="text" name="namaBelakang" class="form-control"
+                                                                id="yourUsername" placeholder="Masukkan Nama Belakang"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label for="yourUsername" class="form-label">Gelar Belakang
+                                                        </label>
+                                                        <div class="input-group has-validation">
+                                                            <input type="text" name="gelarBelakang" class="form-control"
+                                                                id="yourUsername" placeholder="Masukkan Gelar Belakang">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <label for="yourUsername" class="form-label">Nama Klinik /
+                                                            Praktik
+                                                        </label><span style="color: red; font-size:10px;">*</span>
+                                                        <div class="input-group has-validation">
+                                                            <input type="text" name="namaKlinik" class="form-control"
+                                                                id="yourUsername" placeholder="Masukkan Nama Klinik"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label for="yourUsername" class="form-label">Alamat Klinik
+                                                        </label><span style="color: red; font-size:10px;">*</span>
+                                                        <div class="input-group has-validation">
+                                                            <input type="text" name="alamatKlinik" class="form-control"
+                                                                id="yourUsername" placeholder="Masukkan Alamat Klinik">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <label for="yourUsername" class="form-label">Email</label><span
                                                     style="color: red; font-size:10px;">*</span>
                                                 <div class="input-group has-validation">
-                                                    <input type="text" name="nama" class="form-control"
-                                                        id="yourUsername" placeholder="Masukkan Nama Lengkap" required>
+                                                    <input type="text" name="emailPeserta" class="form-control"
+                                                        id="yourUsername" placeholder="Masukkan Email" required>
                                                 </div>
-                                                <label for="yourUsername" class="form-label">Alamat
-                                                    Lengkap</label><span style="color: red; font-size:10px;">*</span>
-                                                <div class="input-group has-validation">
-                                                    <input type="text" name="alamat" class="form-control"
-                                                        id="yourUsername" placeholder="Masukkan Alamat Lengkap"
-                                                        required>
-                                                </div>
-                                                <label for="yourUsername" class="form-label">Nomor Telepon<span
+                                                <label for="yourUsername" class="form-label">Nomor WhatsApp<span
                                                         style="color: red; font-size:10px;">*</span>
                                                     <span style="color: red; font-size : 10px;">(ex :
                                                         082276156253)</span></label>
                                                 <div class="input-group has-validation">
                                                     <input type="number" name="nomorTelepon" class="form-control"
                                                         id="yourUsername"
-                                                        placeholder="masukkan Nomor Telepon ex: 082276156253" required>
+                                                        placeholder="masukkan Nomor WhatsApp ex: 082276156253" required>
                                                 </div>
-                                                <label for="yourUsername" class="form-label">Foto</label>
+
+                                                <label for="yourUsername" class="form-label">Foto Peserta</label>
                                                 <div class="input-group     ">
                                                     <input type="file" name="foto" id="upload"
                                                         onchange="readURL(this);">

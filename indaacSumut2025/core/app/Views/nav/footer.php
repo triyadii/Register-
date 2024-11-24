@@ -49,6 +49,14 @@ if ($dataSession == "Berhasil") {
 <?php
     $arraySession = ['status', 'keterangan'];
     $session->remove($arraySession);
+} else if ($dataSession == "Peringatan") {
+?>
+    <script>
+        swal("Peringatan ! ", "<?= $dataKeterangan; ?>", "warning");
+    </script>
+<?php
+    $arraySession = ['status', 'keterangan'];
+    $session->remove($arraySession);
 }
 ?>
 

@@ -15,8 +15,8 @@ $routes->get('/LoginOperator', 'Page::loginOperator');
 $routes->get('/Dashboard', 'Page::dashboard');
 $routes->get('/DashboardOperator', 'Page::dashboardOperator');
 $routes->get('/Peserta', 'Page::peserta');
-$routes->get('/TampilDataKehadiran', 'Page::tampilDataKehadiran');
 $routes->get('/ScanBarcodeRegister', 'Page::scanBarcodeRegister');
+$routes->get('/ScanBarcodeMasuk', 'Page::scanBarcodeMasuk');
 
 // Proses
 $routes->post('/Register', 'Register_::registrasi');
@@ -26,4 +26,5 @@ $routes->post('/LoginOperator', 'Peserta_::loginOperator');
 $routes->get('/Keluar', 'Peserta_::keluar');
 $routes->get('/KonfirmasiPembayaranPeserta/(:num)/(:num)', 'Peserta_::konfirmasiPembayaranPeserta/$1/$2');
 $routes->post('/KonfirmasiKehadiran', 'Peserta_::konfirmasiKehadiran');
+$routes->post('/KonfirmasiMasuk', 'Peserta_::konfirmasiMasuk');
 $routes->get('/GenerateQrCode/(:any)', 'QrCodeGenerator_::QrCodeGenerator/$1');

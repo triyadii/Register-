@@ -44,41 +44,59 @@ include('nav/sidebar.php');
                                 <h5 class="card-title">
                                     Data Peserta <?= $dataPeserta[0]['namaPeserta'] ?>
                                 </h5>
-                                <div>
-                                    <span style="font-weight: bold;">Nomor Induk Kependudukan : </span><br>
-                                    <span><?= $dataPeserta[0]['nikPeserta'] ?></span>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div>
+                                            <span style="font-weight: bold;">Nomor Induk Kependudukan : </span><br>
+                                            <span><?= $dataPeserta[0]['nikPeserta'] ?></span>
+                                        </div>
+                                        <div>
+                                            <span style="font-weight: bold;">Nama : </span><br>
+                                            <span><?= $dataPeserta[0]['namaPeserta'] ?></span>
+                                        </div>
+                                        <div>
+                                            <span style="font-weight: bold;">Nomor Telepon : </span><br>
+                                            <span><?= $dataPeserta[0]['nomorTeleponPeserta'] ?></span>
+                                        </div>
+                                        <div>
+                                            <span style="font-weight: bold;">Status Peserta : </span><br>
+                                            <?php
+                                            if ($dataPeserta[0]['statusPembayaranPeserta'] == 0) { ?>
+                                                <span style="color: red;">Belum Melakukan Pembayaran</span>
+                                            <?php
+                                            } else if ($dataPeserta[0]['statusPembayaranPeserta'] == 1) { ?>
+                                                <span style="color: gray;">Menunggu Validasi Pembayaran</span>
+                                            <?php
+                                            } else if ($dataPeserta[0]['statusPembayaranPeserta'] == 2) { ?>
+                                                <span style="color: green;">Pembayaran Tervalidasi</span>
+                                            <?php
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div>
+                                            <span style="font-weight: bold;">Email : </span><br>
+                                            <span><?= $dataPeserta[0]['emailPeserta'] ?></span>
+                                        </div>
+                                        <div>
+                                            <span style="font-weight: bold;">Nama Klinik : </span><br>
+                                            <span><?= $dataPeserta[0]['namaKlinik'] ?></span>
+                                        </div>
+                                        <div>
+                                            <span style="font-weight: bold;">Alamat Klinik : </span><br>
+                                            <span><?= $dataPeserta[0]['alamatKlinik'] ?></span>
+                                        </div>
+                                        <div>
+                                            <span style="font-weight: bold;">Username : </span><br>
+                                            <span><?= $dataPeserta[0]['username'] ?></span>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div>
-                                    <span style="font-weight: bold;">Nama : </span><br>
-                                    <span><?= $dataPeserta[0]['namaPeserta'] ?></span>
-                                </div>
-                                <div>
-                                    <span style="font-weight: bold;">Alamat : </span><br>
-                                    <span><?= $dataPeserta[0]['alamatPeserta'] ?></span>
-                                </div>
-                                <div>
-                                    <span style="font-weight: bold;">Nomor Telepon : </span><br>
-                                    <span><?= $dataPeserta[0]['nomorTeleponPeserta'] ?></span>
-                                </div>
-                                <div>
-                                    <span style="font-weight: bold;">Username : </span><br>
-                                    <span><?= $dataPeserta[0]['username'] ?></span>
-                                </div>
-                                <div>
-                                    <span style="font-weight: bold;">Status Peserta : </span><br>
-                                    <?php
-                                    if ($dataPeserta[0]['statusPembayaranPeserta'] == 0) { ?>
-                                        <span style="color: red;">Belum Melakukan Pembayaran</span>
-                                    <?php
-                                    } else if ($dataPeserta[0]['statusPembayaranPeserta'] == 1) { ?>
-                                        <span style="color: gray;">Menunggu Validasi Pembayaran</span>
-                                    <?php
-                                    } else if ($dataPeserta[0]['statusPembayaranPeserta'] == 2) { ?>
-                                        <span style="color: green;">Pembayaran Tervalidasi</span>
-                                    <?php
-                                    }
-                                    ?>
-                                </div>
+
+
+
                             </div>
                         </div>
                     </div>

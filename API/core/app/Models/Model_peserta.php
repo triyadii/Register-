@@ -9,5 +9,5 @@ class Model_peserta extends Model
     protected $table                = 'tbl_peserta';
     protected $primaryKey           = 'idPeserta';
     protected $useAutoIncrement     = true;
-    protected $allowedFields        = ['event', 'akun', 'kodePeserta', 'nikPeserta', 'namaPeserta', 'alamatPesertta', 'nomorTeleponPeserta', 'nomorRekeningPeserta', 'namaRekeningPeserta', 'buktiBayar', 'statusPembayaranPeserta', 'kehadiran', 'foto'];
+    protected $allowedFields        = ['event', 'akun', 'kodePeserta', 'nikPeserta', 'namaPeserta', 'nomorTeleponPeserta', 'nomorRekeningPeserta', 'namaRekeningPeserta', 'emailPeserta', 'namaKlinik', 'alamatKlinik', 'buktiBayar', 'statusPembayaranPeserta', 'kehadiran', 'foto'];
 }

@@ -65,14 +65,16 @@ $routes->group("api", function ($routes) {
     $routes->get("TampilPeserta", "Peserta::index", ['filter' => 'authFilter']);
     $routes->get("TampilPesertaByIdEvent/(:num)", "Peserta::tampilPesertaByIdEvent/$1");
     $routes->get("TampilPesertaByIdPeserta/(:num)", "Peserta::tampilPesertaByIdPeserta/$1");
+    $routes->get("TampilPesertaByKodePeserta/(:num)", "Peserta::tampilPesertaByKodePeserta/$1");
     $routes->post("PendaftaranPeserta", "Peserta::create");
     $routes->post("LoginPeserta", "Peserta::login");
     $routes->post("EditPeserta/(:num)", "Peserta::edit/$1", ['filter' => 'authFilter']);
     $routes->get("KonfirmasiPembayaranPeserta/(:num)/(:num)/(:any)", "Peserta::konfirmasiPembayaran/$1/$2/$3", ['filter' => 'authFilter']);
-    $routes->get("KonfirmasiKehadiran/(:num)/(:any)", "Peserta::konfirmasiKehadiran/$1/$2", ['filter' => 'authFilter']);
+    $routes->get("KonfirmasiKehadiran/(:any)/(:any)", "Peserta::konfirmasiKehadiran/$1/$2", ['filter' => 'authFilter']);
     $routes->delete("HapusPeserta/(:num)/(:any)", "Peserta::hapus/$1/$2", ['filter' => 'authFilter']);
     $routes->post("UploadBuktiBayarPeserta/(:num)", "Peserta::uploadBuktiBayar/$1", ['filter' => 'authFilter']);
     $routes->delete("HapusPeserta/(:num)/(:any)", "Peserta::hapus/$1/$2", ['filter' => 'authFilter']);
+    $routes->get("DownloadBuktiBayar/(:num)", "Peserta::downloadBuktiBayar/$1");
 });
 
 /*

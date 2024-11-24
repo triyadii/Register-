@@ -8,7 +8,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="<?= base_url() ?>GenerateQrCode/<?= $username ?>">
+            <a class="nav-link collapsed" href="<?= base_url() ?>GenerateQrCode/<?= $kodePeserta ?>">
                 <i class="bi bi-qr-code"></i>
                 <span>QR Code</span>
             </a>

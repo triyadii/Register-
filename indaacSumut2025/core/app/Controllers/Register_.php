@@ -9,8 +9,13 @@ class Register_ extends BaseController
         $session        = session();
         $event          = $session->get('event');
         $nik            = $this->request->getPost('nik');
-        $nama           = $this->request->getPost('nama');
-        $alamat         = $this->request->getPost('alamat');
+        $gelarDepan     = $this->request->getPost('gelarDepan');
+        $namaDepan      = $this->request->getPost('namaDepan');
+        $namaBelakang   = $this->request->getPost('namaBelakang');
+        $gelarBelakang  = $this->request->getPost('gelarBelakang');
+        $emailPeserta   = $this->request->getPost('emailPeserta');
+        $namaKlinik     = $this->request->getPost('namaKlinik');
+        $alamatKlinik   = $this->request->getPost('alamatKlinik');
         $nomorTelepon   = "62" . substr(trim($this->request->getPost('nomorTelepon')), 1);
         $foto           = $this->request->getFile('foto');
 
@@ -37,9 +42,14 @@ class Register_ extends BaseController
         $post = [
             'event'         => $event,
             'nikPeserta'    => $nik,
-            'namaPeserta'   => $nama,
-            'alamatPeserta' => $alamat,
+            'gelarDepan'    => $gelarDepan,
+            'namaDepan'     => $namaDepan,
+            'namaBelakang'  => $namaBelakang,
+            'gelarBelakang' => $gelarBelakang,
             'nomorPeserta'  => $nomorTelepon,
+            'emailPeserta'  => $emailPeserta,
+            'namaKlinik'    => $namaKlinik,
+            'alamatKlinik'  => $alamatKlinik,
             'foto'          => $fotoUpload
         ];
 

@@ -153,12 +153,12 @@ class Model_data extends Model
         $builder->join('tbl_event', 'tbl_event.idEvent = tbl_peserta.event');
         return $builder->get()->getResultArray();
     }
-    public function cekUsernamePeserta($username)
+    public function cekUsernamePeserta($kodePeserta)
     {
         $db      = \Config\Database::connect();
         $builder = $db->table('tbl_peserta');
         $builder->select('*');
-        $builder->where('username', $username);
+        $builder->where('kodePeserta', $kodePeserta);
         $builder->join('tbl_event', 'tbl_event.idEvent = tbl_peserta.event');
         return $builder->get()->getResultArray();
     }
@@ -168,6 +168,16 @@ class Model_data extends Model
         $builder = $db->table('tbl_peserta');
         $builder->select('*');
         $builder->where('idPeserta', $idPeserta);
+        $builder->join('tbl_event', 'tbl_event.idEvent = tbl_peserta.event');
+        $builder->join('tbl_akun', 'tbl_akun.idAkun = tbl_peserta.akun');
+        return $builder->get()->getResultArray();
+    }
+    public function cekPesertaByKodePeserta($kodePeserta)
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('tbl_peserta');
+        $builder->select('*');
+        $builder->where('kodePeserta', $kodePeserta);
         $builder->join('tbl_event', 'tbl_event.idEvent = tbl_peserta.event');
         $builder->join('tbl_akun', 'tbl_akun.idAkun = tbl_peserta.akun');
         return $builder->get()->getResultArray();

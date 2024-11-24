@@ -25,10 +25,12 @@ include('nav/sidebarOperator.php');
                                     <th scope="col">Kode</th>
                                     <th scope="col">NIK</th>
                                     <th scope="col">Nama</th>
-                                    <th scope="col">Alamat</th>
                                     <th scope="col">Telepon</th>
-                                    <th scope="col">Foto</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Nama Klinik</th>
+                                    <th scope="col">Alamat Klinik</th>
                                     <th scope="col">Peserta</th>
+                                    <th scope="col">Status</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -43,12 +45,10 @@ include('nav/sidebarOperator.php');
                                         <td><?= $dp['kodePeserta'] ?></td>
                                         <td><?= $dp['nikPeserta'] ?></td>
                                         <td><?= $dp['namaPeserta'] ?></td>
-                                        <td><?= $dp['alamatPeserta'] ?></td>
                                         <td><?= $dp['nomorTeleponPeserta'] ?></td>
-                                        <td>
-                                            <img src="https://api.register.co.id/uploads/foto/<?= $dp['foto'] ?>"
-                                                style="width: 100%;">
-                                        </td>
+                                        <td><?= $dp['emailPeserta'] ?></td>
+                                        <td><?= $dp['namaKlinik'] ?></td>
+                                        <td><?= $dp['alamatKlinik'] ?></td>
                                         <td>
                                             <?php
                                             if ($dp['statusPembayaranPeserta']  == 0) { ?>
@@ -59,6 +59,17 @@ include('nav/sidebarOperator.php');
                                             <?php
                                             } else if ($dp['statusPembayaranPeserta'] == 2) { ?>
                                                 <span style="color:green;">Pembayaran Tervalidasi</span>
+                                            <?php
+                                            }
+                                            ?>
+                                        </td>
+                                        <td>
+                                            <?php
+                                            if ($dp['kehadiran']  == 0) { ?>
+                                                <span style="color:red;">Belum Registrasi</span>
+                                            <?php
+                                            } else if ($dp['kehadiran'] == 1) { ?>
+                                                <span style="color:gray;">Sudah Registrasi</span>
                                             <?php
                                             }
                                             ?>
@@ -106,8 +117,24 @@ include('nav/sidebarOperator.php');
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <img src="https://api.register.co.id/uploads/buktiBayar/<?= $dp['buktiBayar'] ?>"
-                                                        style="width: 100%;">
+                                                    <?php
+                                                    if ($dp['buktiBayar'] == null) { ?>
+                                                        <h5 style="color:red;">Mohon maaf, Bukti bayar belum di upload</h5>
+                                                    <?php
+                                                    } else { ?>
+                                                        <img src="https://api.register.co.id/uploads/buktiBayar/<?= $dp['buktiBayar'] ?>"
+                                                            style="width: 100%;">
+                                                    <?php
+                                                    }
+                                                    ?>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a
+                                                        href="https://api.register.co.id/api/DownloadBuktiBayar/<?= $dp['idPeserta'] ?>"><button
+                                                            class="btn btn-primary w-100" type="submit"
+                                                            style="background-color:green; border-color:green;">Download
+                                                            Bukti Bayar</button></a><br><br>
                                                 </div>
                                                 </form>
                                             </div>

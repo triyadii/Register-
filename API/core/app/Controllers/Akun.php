@@ -123,12 +123,13 @@ class Akun extends BaseController
                     'data'      => [
                         'username'      => $cekPeserta[0]['username'],
                         'namaPeserta'   => $cekPeserta[0]['namaPeserta'],
+                        'kodePeserta'   => $cekPeserta[0]['kodePeserta'],
                         'event'         => $cekPeserta[0]['event'],
                         'namaEvent'     => $cekPeserta[0]['namaEvent'],
                         'idPeserta'     => $cekPeserta[0]['idPeserta'],
-                        'namaHakAkses'   => $cekUsername[0]['namaHakAkses'],
-                        'idHakAkses'     => $cekUsername[0]['idHakAkses'],
-                        'username'       => $cekUsername[0]['username'],
+                        'namaHakAkses'  => $cekUsername[0]['namaHakAkses'],
+                        'idHakAkses'    => $cekUsername[0]['idHakAkses'],
+                        'username'      => $cekUsername[0]['username'],
                         'token'         => $token,
                     ]
                 ];

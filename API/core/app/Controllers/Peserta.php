@@ -56,6 +56,17 @@ class Peserta extends BaseController
         ];
         return $this->respond($response, 200);
     }
+    public function tampilPesertaByKodePeserta($kodePeserta = null)
+    {
+        $modelData        = new Model_data;
+        $dataHakAkses     = $modelData->cekPesertaByKodePeserta($kodePeserta);
+        $response = [
+            'status'    => 200,
+            'messages'  => "Berhasil Menampilkan Peserta Berdasarkan Event",
+            'data'      => $dataHakAkses
+        ];
+        return $this->respond($response, 200);
+    }
     public function create()
     {
         $modelPeserta           = new Model_peserta;
@@ -64,36 +75,44 @@ class Peserta extends BaseController
         $modelData              = new Model_data;
         $event                  = $this->request->getVar('event');
         $nikPeserta             = $this->request->getVar('nikPeserta');
-        $namaPeserta            = $this->request->getVar('namaPeserta');
-        $alamatPeserta          = $this->request->getVar('alamatPeserta');
+        $gelarDepan             = $this->request->getVar('gelarDepan');
+        $namaDepan              = $this->request->getVar('namaDepan');
+        $namaBelakang           = $this->request->getVar('namaBelakang');
+        $gelarBelakang          = $this->request->getVar('gelarBelakang');
+        $namaLengkap            = $gelarDepan . ' ' . $namaDepan . ' ' . $namaBelakang . ' ' . $gelarBelakang;
         $nomorTeleponPeserta    = $this->request->getVar('nomorPeserta');
+        $emailPeserta           = $this->request->getVar('emailPeserta');
+        $namaKlinik             = $this->request->getVar('namaKlinik');
+        $alamatKlinik           = $this->request->getVar('alamatKlinik');
         $foto                   = $this->request->getFile('foto');
         $namaFoto               = $foto->getRandomName();
-        $password = "peserta" . rand(0, 9999);
+        $password               = "indaac2025";
         $hashPassword   = [
             'cost' => 10,
         ];
-        $kodePeserta           = rand(0, 9999999999);
-
+        $kodePeserta           = rand(0, 999);
         // Pembuatan Akun Peserta
+        $username = $namaDepan . $kodePeserta;
         $dataAkun = [
-            'username'  => $kodePeserta,
+            'username'  => $username,
             'password'  => password_hash($password, PASSWORD_DEFAULT, $hashPassword),
             'hakAkses'  => "4"
         ];
         $modelAkun->insert($dataAkun);
-        $dataPeserta = $modelData->cekUsername($kodePeserta);
+        $dataPeserta = $modelData->cekUsername($username);
         // Penyimpanan Data Peserta
         $data = [
             'akun'                      => $dataPeserta[0]['idAkun'],
             'event'                     => $event,
             'kodePeserta'               => $kodePeserta,
             'nikPeserta'                => $nikPeserta,
-            'namaPeserta'               => $namaPeserta,
-            'alamatPeserta'             => $alamatPeserta,
+            'namaPeserta'               => $namaLengkap,
             'nomorTeleponPeserta'       => $nomorTeleponPeserta,
             'nomorRekeningPeserta'      => "",
             'namaRekeningPeserta'       => "",
+            'emailPeserta'              => $emailPeserta,
+            'namaKlinik'                => $namaKlinik,
+            'alamatKlinik'              => $alamatKlinik,
             'buktiBayar'                => "",
             'statusPembayaran'          => "0",
             'kehadiran'                 => "0",
@@ -106,7 +125,7 @@ class Peserta extends BaseController
         $dataEvent = $modelData->cekEventById($event);
         $subdomain = $dataEvent[0]['subdomain'];
 
-        $pesan = "Selamat anda sudah terdaftar, silahkan Login Menggunakan Akun Di Bawah ini untuk melanjutkan kelengkapan data \n\nUsername : " . $kodePeserta . "\nPassword : " . $password . "\n\nSilahkan Klik Link Ini untuk login akun \nhttps://" . $subdomain . ".register.co.id/Login";
+        $pesan = "Selamat anda sudah terdaftar, silahkan Login Menggunakan Akun Di Bawah ini untuk melanjutkan kelengkapan data \n\nUsername : " . $username . "\nPassword :" . $password . "\n\nSilahkan Klik Link Ini untuk login akun \nhttps://" . $subdomain . ".register.co.id/Login";
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => 'https://app.wapanels.com/api/create-message',
@@ -218,12 +237,10 @@ class Peserta extends BaseController
         $usernameAkses          = $this->request->getVar('usernameAkses');
         $nikPeserta             = $this->request->getVar('nikPeserta');
         $namaPeserta            = $this->request->getVar('namaPeserta');
-        $alamatPeserta          = $this->request->getVar('alamatPeserta');
         $nomorTeleponPeserta    = $this->request->getVar('nomorTeleponPeserta');
         $data = [
             'nikPeserta'            => $nikPeserta,
             'namaPeserta'           => $namaPeserta,
-            'alamatPeserta'         => $alamatPeserta,
             'nomorTeleponPeserta'   => $nomorTeleponPeserta
         ];
         $modelPeserta->update($idPeserta, $data);
@@ -297,21 +314,35 @@ class Peserta extends BaseController
         $modelData      = new Model_data;
         $modelLog       = new Model_log;
         $dataPeserta    = $modelData->cekUsernamePeserta($kodePeserta);
-        $data = [
-            'kehadiran' => 1
-        ];
-        $modelPeserta->update($dataPeserta[0]['idPeserta'], $data);
-        $dataLog = [
-            'username'   => $usernameAkses,
-            'waktu'      => date('Y-m-d H:i:s'),
-            'keterangan' => "Melakukan Konfirmasi Kehadiran Peserta"
-        ];
-        $modelLog->insert($dataLog);
-        $response = [
-            'status'    => 200,
-            'messages'  => "Berhasil Konfirmasi Kehadiran Peserta",
-        ];
-        return $this->respond($response, 200);
+        if ($dataPeserta[0]['kehadiran'] == 1) {
+            $dataLog = [
+                'username'   => $usernameAkses,
+                'waktu'      => date('Y-m-d H:i:s'),
+                'keterangan' => "Sudah Melakukan Registrasi Ulang"
+            ];
+            $modelLog->insert($dataLog);
+            $response = [
+                'status'    => 202,
+                'messages'  => "Sudah Melakukan Registrasi Ulang",
+            ];
+            return $this->respond($response, 202);
+        } else {
+            $data = [
+                'kehadiran' => 1
+            ];
+            $modelPeserta->update($dataPeserta[0]['idPeserta'], $data);
+            $dataLog = [
+                'username'   => $usernameAkses,
+                'waktu'      => date('Y-m-d H:i:s'),
+                'keterangan' => "Melakukan Konfirmasi Kehadiran Peserta"
+            ];
+            $modelLog->insert($dataLog);
+            $response = [
+                'status'    => 200,
+                'messages'  => "Berhasil Konfirmasi Kehadiran Peserta",
+            ];
+            return $this->respond($response, 200);
+        }
     }
     public function hapus($idPeserta = null, $usernameAkses = null)
     {
@@ -330,5 +361,11 @@ class Peserta extends BaseController
             'messages'  => "Berhasil Menghapus Peserta",
         ];
         return $this->respond($response, 200);
+    }
+    public function downloadBuktiBayar($idPeserta = null)
+    {
+        $modelData    = new Model_data;
+        $dataPeserta  = $modelData->cekPesertaByIdPeserta($idPeserta);
+        return $this->response->download('uploads/buktiBayar/' . $dataPeserta[0]['buktiBayar'], null);
     }
 }

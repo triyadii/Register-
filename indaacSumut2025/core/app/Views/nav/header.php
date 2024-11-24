@@ -2,6 +2,7 @@
 $session        = session();
 $namaEvent      = $session->get('namaEvent');
 $namaPeserta    = $session->get('namaPeserta');
+$kodePeserta    = $session->get('kodePeserta');
 $namaOperator   = $session->get('namaOperator');
 $username       = $session->get('username');
 $hakAkses       = $session->get('hakAkses');

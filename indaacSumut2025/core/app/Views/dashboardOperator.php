@@ -58,55 +58,56 @@ include('nav/sidebarOperator.php');
                                 <br>
                                 <?php
                                 if ($hakAkses == 3) { ?>
-                                    <div class="row">
+                                <div class="row">
 
-                                        <div class="col-6">
-                                            <a href="<?= base_url() ?>ScanBarcodeRegister" target="_blank"><button
-                                                    class="btn btn-primary w-100" type="submit">Scan Barcode
-                                                    Registrasi</button></a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href=""><button class="btn btn-primary w-100" type="submit">Scan Barcode
-                                                    Masuk</button></a>
-                                        </div>
+                                    <div class="col-6">
+                                        <a href="<?= base_url() ?>ScanBarcodeRegister" target="_blank"><button
+                                                class="btn btn-primary w-100" type="submit">Scan Barcode
+                                                Registrasi</button></a>
                                     </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <a href=" <?= base_url() ?>Peserta"><button class="btn btn-primary w-100"
-                                                    type="submit">Data Peserta</button></a>
-                                        </div>
+                                    <div class="col-6">
+                                        <a href="<?= base_url() ?>ScanBarcodeMasuk" target="_blank"><button
+                                                class="btn btn-primary w-100" type="submit">Scan Barcode
+                                                Masuk</button></a>
                                     </div>
-                                    <br>
-                                    <div class="row">
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <a href=" <?= base_url() ?>Peserta"><button class="btn btn-primary w-100"
+                                                type="submit">Data Peserta</button></a>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
 
-                                        <br>
-                                    </div>
+                                    <br>
+                                </div>
                                 <?php
                                 } else if ($hakAkses == 2) { ?>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <a href="" data-bs-toggle="modal"
-                                                data-bs-target="#modalUploadLinkMateri"><button
-                                                    class="btn btn-primary w-100" type="submit">Upload Link
-                                                    Materi</button></a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="" data-bs-toggle="modal"
-                                                data-bs-target="#modalUploadTemplateSertifikat"><button
-                                                    class="btn btn-primary w-100" type="submit">Upload Template
-                                                    Sertifikat</button></a>
-                                        </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <a href="" data-bs-toggle="modal"
+                                            data-bs-target="#modalUploadLinkMateri"><button
+                                                class="btn btn-primary w-100" type="submit">Upload Link
+                                                Materi</button></a>
                                     </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <a href="" data-bs-toggle="modal"
-                                                data-bs-target="#modalUploadLinkVideoDanGaleri"><button
-                                                    class="btn btn-primary w-100" type="submit">Upload Link Video Dan
-                                                    Galeri</button></a>
-                                        </div>
+                                    <div class="col-6">
+                                        <a href="" data-bs-toggle="modal"
+                                            data-bs-target="#modalUploadTemplateSertifikat"><button
+                                                class="btn btn-primary w-100" type="submit">Upload Template
+                                                Sertifikat</button></a>
                                     </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <a href="" data-bs-toggle="modal"
+                                            data-bs-target="#modalUploadLinkVideoDanGaleri"><button
+                                                class="btn btn-primary w-100" type="submit">Upload Link Video Dan
+                                                Galeri</button></a>
+                                    </div>
+                                </div>
                                 <?php
                                 }
                                 ?>

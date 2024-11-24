@@ -188,15 +188,6 @@ class Page extends BaseController
 
         return view('peserta', compact('dataPeserta'));
     }
-    public function tampilDataKehadiran()
-    {
-        $session = session();
-        $ses_data = [
-            'event'        => "1"
-        ];
-        $session->set($ses_data);
-        return view('tampilDataKehadiran');
-    }
     public function scanBarcodeRegister()
     {
         $session = session();
@@ -205,5 +196,14 @@ class Page extends BaseController
         ];
         $session->set($ses_data);
         return view('scanBarcodeRegister');
+    }
+    public function scanBarcodeMasuk()
+    {
+        $session = session();
+        $ses_data = [
+            'event'        => "1"
+        ];
+        $session->set($ses_data);
+        return view('scanBarcodeMasuk');
     }
 }
