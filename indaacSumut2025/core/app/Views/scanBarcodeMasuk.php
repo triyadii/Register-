@@ -33,10 +33,13 @@ include('nav/sidebarOperator.php');
                                             <label for="yourUsername" class="form-label">Scan Barcode Masuk</label>
                                             <span style="color: red; font-size:10px;">*</span>
                                             <div class="input-group has-validation">
-                                                <input type="text" id="hasilscan" name="kodePeserta"
-                                                    class="form-control" id="yourUsername" onchange="autoSubmit()"
-                                                    required>
+                                                <input type="text" id="hasilscan" name="id" class="form-control"
+                                                    id="yourUsername" onchange="autoSubmit()" required>
                                             </div>
+                                        </div>
+                                        <div class="col-12" style="margin-top: 10px;">
+                                            <a href=" <?= base_url() ?>PenjagaStand"><button
+                                                    class="btn btn-primary w-100" type="submit">Proses Data</button></a>
                                         </div>
                                     </div>
                                 </form>

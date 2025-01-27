@@ -9,21 +9,23 @@ class Register_ extends BaseController
         $session        = session();
         $event          = $session->get('event');
         $nik            = $this->request->getPost('nik');
-        $gelarDepan     = $this->request->getPost('gelarDepan');
-        $namaDepan      = $this->request->getPost('namaDepan');
-        $namaBelakang   = $this->request->getPost('namaBelakang');
-        $gelarBelakang  = $this->request->getPost('gelarBelakang');
+        $namaPanggilan  = strtolower($this->request->getPost('namaPanggilan'));
+        $namaLengkap    = $this->request->getPost('namaLengkap');
         $emailPeserta   = $this->request->getPost('emailPeserta');
         $namaKlinik     = $this->request->getPost('namaKlinik');
         $alamatKlinik   = $this->request->getPost('alamatKlinik');
         $nomorTelepon   = "62" . substr(trim($this->request->getPost('nomorTelepon')), 1);
         $foto           = $this->request->getFile('foto');
+        $buktiBayar     = $this->request->getFile('buktiBayar');
+        $namaRekening   = $this->request->getPost('namaRekening');
+        $nomorRekening  = $this->request->getPost('nomorRekening');
 
+        // Pengecekan Untuk Foto Peserta
         if ($foto->getError() != 4) {
             $validasiFoto = $this->validate([
                 'foto' => [
                     'uploaded[foto]',
-                    'mime_in[foto,application/pdf,image/jpeg]',
+                    'mime_in[foto,application/pdf,image/jpeg,image/png]',
                     'max_size[foto,7168]',
                 ],
             ]);
@@ -39,18 +41,42 @@ class Register_ extends BaseController
         } else {
             $fotoUpload = curl_file_create(base_url() . 'kosong.jpg', 'application/pdf,image/jpeg', 'kosong.jpg');
         }
+
+        // Pengecekan Untuk Bukti Bayar
+        if ($buktiBayar->getError() != 4) {
+            $validasiBuktiBayar = $this->validate([
+                'buktiBayar' => [
+                    'uploaded[buktiBayar]',
+                    'mime_in[buktiBayar,application/pdf,image/jpeg,image/png]',
+                    'max_size[buktiBayar,7168]',
+                ],
+            ]);
+            if ($validasiBuktiBayar == false) {
+                $ses_data = [
+                    'status'  => "Gagal",
+                    'waktu'    => "File terlalu besar atau tipe file tidak sesuai, file max 1,5 mb dan tipe data jpg/jpeg, silahkan coba lagi"
+                ];
+                $session->set($ses_data);
+                return redirect()->back();
+            }
+            $buktiBayarUpload = curl_file_create($buktiBayar->getRealPath(), 'application/pdf,image/jpeg', $buktiBayar->getName());
+        } else {
+            $buktiBayarUpload = curl_file_create(base_url() . 'kosong.jpg', 'application/pdf,image/jpeg', 'kosong.jpg');
+        }
+
         $post = [
             'event'         => $event,
             'nikPeserta'    => $nik,
-            'gelarDepan'    => $gelarDepan,
-            'namaDepan'     => $namaDepan,
-            'namaBelakang'  => $namaBelakang,
-            'gelarBelakang' => $gelarBelakang,
+            'namaPanggilan' => str_replace(' ', '', $namaPanggilan),
+            'namaLengkap'   => $namaLengkap,
             'nomorPeserta'  => $nomorTelepon,
             'emailPeserta'  => $emailPeserta,
             'namaKlinik'    => $namaKlinik,
             'alamatKlinik'  => $alamatKlinik,
-            'foto'          => $fotoUpload
+            'foto'          => $fotoUpload,
+            'buktiBayar'    => $buktiBayarUpload,
+            'namaRekening'  => $namaRekening,
+            'nomorRekening' => $nomorRekening
         ];
 
         $curl = curl_init();
@@ -101,7 +127,7 @@ class Register_ extends BaseController
         $validasiBuktiBayar = $this->validate([
             'buktiBayar' => [
                 'uploaded[buktiBayar]',
-                'mime_in[buktiBayar,application/pdf,image/jpeg]',
+                'mime_in[buktiBayar,application/pdf,image/jpeg,image/png]',
                 'max_size[buktiBayar,7168]',
             ],
         ]);

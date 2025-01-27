@@ -56,7 +56,7 @@ $session    = session();
                                     <h5>Silahkan tunggu Validasi Pembayaran</h5>
                                     <div class="row">
                                         <div class="col-4" style="margin-top:5%;">
-                                            <a href="https://wa.me/6282275849670" target="_blank"> <button
+                                            <a href="https://wa.me/6285337233284" target="_blank"> <button
                                                     class="btn btn-primary w-100" type="submit"
                                                     style="background-color: green; border-color:green;">
                                                     Admin</button></a>
@@ -110,34 +110,34 @@ $session    = session();
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
     <script>
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
 
-            reader.onload = function(e) {
-                $('#image').attr('src', e.target.result);
+                reader.onload = function(e) {
+                    $('#image').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
             }
-
-            reader.readAsDataURL(input.files[0]);
         }
-    }
     </script>
     <?php
     $dataSession = $session->get('status');
     $dataKeterangan = $session->get('keterangan');
     if ($dataSession == "Berhasil") {
     ?>
-    <script>
-    swal("Selamat ! ", "<?= $dataKeterangan; ?>", "success");
-    </script>
+        <script>
+            swal("Selamat ! ", "<?= $dataKeterangan; ?>", "success");
+        </script>
     <?php
         $arraySession = ['status', 'keterangan'];
         $session->remove($arraySession);
     } else if ($dataSession == "Gagal") {
     ?>
-    <script>
-    swal("Gagal ! ", "<?= $dataKeterangan; ?>", "error");
-    </script>
+        <script>
+            swal("Gagal ! ", "<?= $dataKeterangan; ?>", "error");
+        </script>
     <?php
         $arraySession = ['status', 'keterangan'];
         $session->remove($arraySession);

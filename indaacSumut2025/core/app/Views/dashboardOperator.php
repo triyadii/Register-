@@ -58,56 +58,52 @@ include('nav/sidebarOperator.php');
                                 <br>
                                 <?php
                                 if ($hakAkses == 3) { ?>
-                                <div class="row">
+                                    <div class="row">
 
-                                    <div class="col-6">
-                                        <a href="<?= base_url() ?>ScanBarcodeRegister" target="_blank"><button
-                                                class="btn btn-primary w-100" type="submit">Scan Barcode
-                                                Registrasi</button></a>
+                                        <div class="col-6">
+                                            <a href="" data-bs-toggle="modal" data-bs-target="#modalRegistrasiUlang"><button
+                                                    class="btn btn-primary w-100" type="submit">Registrasi
+                                                    Ulang</button></a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="<?= base_url() ?>ScanBarcodeMasuk" target="_blank"><button
+                                                    class="btn btn-primary w-100" type="submit">Masuk Ruangan</button></a>
+                                        </div>
                                     </div>
-                                    <div class="col-6">
-                                        <a href="<?= base_url() ?>ScanBarcodeMasuk" target="_blank"><button
-                                                class="btn btn-primary w-100" type="submit">Scan Barcode
-                                                Masuk</button></a>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <a href=" <?= base_url() ?>Peserta"><button class="btn btn-primary w-100"
-                                                type="submit">Data Peserta</button></a>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-
                                     <br>
-                                </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href=" <?= base_url() ?>Peserta"><button class="btn btn-primary w-100"
+                                                    type="submit">Data Peserta</button></a>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href=" <?= base_url() ?>PenjagaStand"><button class="btn btn-primary w-100"
+                                                    type="submit">Data Penjaga Stand</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <br>
+                                    </div>
                                 <?php
                                 } else if ($hakAkses == 2) { ?>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <a href="" data-bs-toggle="modal"
-                                            data-bs-target="#modalUploadLinkMateri"><button
-                                                class="btn btn-primary w-100" type="submit">Upload Link
-                                                Materi</button></a>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <a href="" data-bs-toggle="modal"
+                                                data-bs-target="#modalUploadLinkMateri"><button
+                                                    class="btn btn-primary w-100" type="submit">Upload Link
+                                                    Materi</button></a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" data-bs-toggle="modal"
+                                                data-bs-target="#modalUploadLinkVideoDanGaleri"><button
+                                                    class="btn btn-primary w-100" type="submit">Upload Link Video Dan
+                                                    Galeri</button></a>
+                                        </div>
                                     </div>
-                                    <div class="col-6">
-                                        <a href="" data-bs-toggle="modal"
-                                            data-bs-target="#modalUploadTemplateSertifikat"><button
-                                                class="btn btn-primary w-100" type="submit">Upload Template
-                                                Sertifikat</button></a>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <a href="" data-bs-toggle="modal"
-                                            data-bs-target="#modalUploadLinkVideoDanGaleri"><button
-                                                class="btn btn-primary w-100" type="submit">Upload Link Video Dan
-                                                Galeri</button></a>
-                                    </div>
-                                </div>
                                 <?php
                                 }
                                 ?>
@@ -122,6 +118,32 @@ include('nav/sidebarOperator.php');
             </div>
         </div>
     </section>
+    <!-- Modal Registrasi Ulang -->
+    <div class="modal fade" id="modalRegistrasiUlang" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrasi Ulang</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="KonfirmasiKehadiran" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class=" col-12">
+                                <label for="yourUsername" class="form-label">Scan Barcode Registrasi</label>
+                                <div class="input-group has-validation">
+                                    <input type="text" name="kodePeserta" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-12" style="margin-top:3%;">
+                                <button class="btn btn-primary w-100" type="submit">Registrasi</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Modal Upload Link Materi -->
     <div class="modal fade" id="modalUploadLinkMateri" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">

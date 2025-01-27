@@ -141,6 +141,7 @@ class Model_data extends Model
         $builder->where('event', $idEvent);
         $builder->orderBy('idPeserta', 'DESC');
         $builder->join('tbl_event', 'tbl_event.idEvent = tbl_peserta.event');
+        $builder->join('tbl_akun', 'tbl_akun.idAkun = tbl_peserta.akun');
         return $builder->get()->getResultArray();
     }
     public function cekPeserta($nikPeserta, $event)
@@ -153,13 +154,12 @@ class Model_data extends Model
         $builder->join('tbl_event', 'tbl_event.idEvent = tbl_peserta.event');
         return $builder->get()->getResultArray();
     }
-    public function cekUsernamePeserta($kodePeserta)
+    public function cekUsernamePeserta($username)
     {
         $db      = \Config\Database::connect();
-        $builder = $db->table('tbl_peserta');
+        $builder = $db->table('tbl_akun');
         $builder->select('*');
-        $builder->where('kodePeserta', $kodePeserta);
-        $builder->join('tbl_event', 'tbl_event.idEvent = tbl_peserta.event');
+        $builder->where('username', $username);
         return $builder->get()->getResultArray();
     }
     public function cekPesertaByIdPeserta($idPeserta)
@@ -188,5 +188,23 @@ class Model_data extends Model
         $builder = $db->table('tbl_peserta');
         $builder->select('*');
         return $builder->countAllResults();
+    }
+    // =========================================================================
+    // Manajemen Stand
+    // =========================================================================
+    public function tampilSeluruhPenjaga()
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('tbl_penjaga_stand');
+        $builder->select('*');
+        return $builder->get()->getResultArray();
+    }
+    public function cekPenjagaStand($idPenjagaStand)
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('tbl_penjaga_stand');
+        $builder->select('*');
+        $builder->where('idPenjagaStand', $idPenjagaStand);
+        return $builder->get()->getResultArray();
     }
 }

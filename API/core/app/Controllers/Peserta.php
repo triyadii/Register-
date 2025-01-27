@@ -8,6 +8,7 @@ use App\Models\Model_log;
 use App\Models\Model_data;
 use App\Models\Model_peserta;
 use App\Models\Model_akun;
+use App\Models\Model_penjaga_stand;
 use \Firebase\JWT\JWT;
 
 // QRCODE
@@ -75,24 +76,40 @@ class Peserta extends BaseController
         $modelData              = new Model_data;
         $event                  = $this->request->getVar('event');
         $nikPeserta             = $this->request->getVar('nikPeserta');
-        $gelarDepan             = $this->request->getVar('gelarDepan');
-        $namaDepan              = $this->request->getVar('namaDepan');
-        $namaBelakang           = $this->request->getVar('namaBelakang');
-        $gelarBelakang          = $this->request->getVar('gelarBelakang');
-        $namaLengkap            = $gelarDepan . ' ' . $namaDepan . ' ' . $namaBelakang . ' ' . $gelarBelakang;
+        $namaPanggilan          = $this->request->getVar('namaPanggilan');
+        $namaLengkap            = $this->request->getVar('namaLengkap');
         $nomorTeleponPeserta    = $this->request->getVar('nomorPeserta');
         $emailPeserta           = $this->request->getVar('emailPeserta');
         $namaKlinik             = $this->request->getVar('namaKlinik');
         $alamatKlinik           = $this->request->getVar('alamatKlinik');
+        $namaRekening           = $this->request->getVar('namaRekening');
+        $nomorRekening          = $this->request->getVar('nomorRekening');
         $foto                   = $this->request->getFile('foto');
+        $buktiBayar             = $this->request->getFile('buktiBayar');
         $namaFoto               = $foto->getRandomName();
+        $namaBuktiBayar         = $buktiBayar->getRandomName();
         $password               = "indaac2025";
         $hashPassword   = [
             'cost' => 10,
         ];
         $kodePeserta           = rand(0, 999);
+        // Pengecekan NIK Peserta 
+        $cekNIK = $modelData->cekPeserta($nikPeserta, $event);
+        if ($cekNIK != null) {
+            $dataLog = [
+                'username'      => "Peserta",
+                'waktu'         => date('Y-m-d H:i:s'),
+                'keterangan'    => "Pendaftaran Gagal dikarenakan NIK sudah ada di dalam Database"
+            ];
+            $modelLog->insert($dataLog);
+            $response = [
+                'status'    => 200,
+                'messages'  => "Mohon Maaf, NIK Anda sudah terdaftar di dalam database, Silahkan Chat Admin untuk memastikan Data Anda. <a href='https://wa.me/6285337233284' target='_blank'>Chat Admin</a>",
+            ];
+            return $this->respond($response, 400);
+        }
         // Pembuatan Akun Peserta
-        $username = $namaDepan . $kodePeserta;
+        $username = $namaPanggilan . $kodePeserta;
         $dataAkun = [
             'username'  => $username,
             'password'  => password_hash($password, PASSWORD_DEFAULT, $hashPassword),
@@ -100,26 +117,51 @@ class Peserta extends BaseController
         ];
         $modelAkun->insert($dataAkun);
         $dataPeserta = $modelData->cekUsername($username);
+
         // Penyimpanan Data Peserta
-        $data = [
-            'akun'                      => $dataPeserta[0]['idAkun'],
-            'event'                     => $event,
-            'kodePeserta'               => $kodePeserta,
-            'nikPeserta'                => $nikPeserta,
-            'namaPeserta'               => $namaLengkap,
-            'nomorTeleponPeserta'       => $nomorTeleponPeserta,
-            'nomorRekeningPeserta'      => "",
-            'namaRekeningPeserta'       => "",
-            'emailPeserta'              => $emailPeserta,
-            'namaKlinik'                => $namaKlinik,
-            'alamatKlinik'              => $alamatKlinik,
-            'buktiBayar'                => "",
-            'statusPembayaran'          => "0",
-            'kehadiran'                 => "0",
-            'foto'                      => $namaFoto
-        ];
-        $modelPeserta->insert($data);
-        $foto->move('uploads/foto/', $namaFoto);
+        // Pengecekan Apabila Gambar Bukti Bayar Kosong
+        if ($buktiBayar->getName() == "kosong.jpg") {
+            $data = [
+                'akun'                      => $dataPeserta[0]['idAkun'],
+                'event'                     => $event,
+                'kodePeserta'               => $kodePeserta,
+                'nikPeserta'                => $nikPeserta,
+                'namaPeserta'               => $namaLengkap,
+                'nomorTeleponPeserta'       => $nomorTeleponPeserta,
+                'nomorRekeningPeserta'      => "",
+                'namaRekeningPeserta'       => "",
+                'emailPeserta'              => $emailPeserta,
+                'namaKlinik'                => $namaKlinik,
+                'alamatKlinik'              => $alamatKlinik,
+                'buktiBayar'                => "",
+                'statusPembayaranPeserta'   => "0",
+                'kehadiran'                 => "0",
+                'foto'                      => $namaFoto
+            ];
+            $modelPeserta->insert($data);
+            $foto->move('uploads/foto/', $namaFoto);
+        } else {
+            $data = [
+                'akun'                      => $dataPeserta[0]['idAkun'],
+                'event'                     => $event,
+                'kodePeserta'               => $kodePeserta,
+                'nikPeserta'                => $nikPeserta,
+                'namaPeserta'               => $namaLengkap,
+                'nomorTeleponPeserta'       => $nomorTeleponPeserta,
+                'nomorRekeningPeserta'      => $nomorRekening,
+                'namaRekeningPeserta'       => $namaRekening,
+                'emailPeserta'              => $emailPeserta,
+                'namaKlinik'                => $namaKlinik,
+                'alamatKlinik'              => $alamatKlinik,
+                'buktiBayar'                => $namaBuktiBayar,
+                'statusPembayaranPeserta'   => "1",
+                'kehadiran'                 => "0",
+                'foto'                      => $namaFoto
+            ];
+            $modelPeserta->insert($data);
+            $foto->move('uploads/foto/', $namaFoto);
+            $buktiBayar->move('uploads/buktiBayar/', $namaBuktiBayar);
+        }
 
         // Proses Kirim Username dan Password Peserta
         $dataEvent = $modelData->cekEventById($event);
@@ -137,8 +179,8 @@ class Peserta extends BaseController
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => 'POST',
             CURLOPT_POSTFIELDS => array(
-                'appkey' => 'f21ef4d0-ae66-4388-9e30-791f9c841080',
-                'authkey' => 'G1BdG8QGccMQfi0gaPf6QYzaILNdkJAhzjBi0WfBEh6PaoRRL6',
+                'appkey' => '95184151-cbcc-46a9-b623-a7fd1d0e7314',
+                'authkey' => '4P4gGLO1Pd8qvLUMBUKDVsQxdtoK5IyDxJIHtMRlJyTuQGwZpM',
                 'to' => $nomorTeleponPeserta,
                 'message' => $pesan,
                 'sandbox' => 'false'
@@ -155,7 +197,7 @@ class Peserta extends BaseController
         $modelLog->insert($dataLog);
         $response = [
             'status'    => 200,
-            'messages'  => "Berhasil melakukan pendaftaran",
+            'messages'  => "Berhasil melakukan pendaftaran, apabila tidak ada masuk WA, Silahkan Chat Admin untuk memastikan Data Anda. <a href='https://wa.me/6285337233284' target='_blank'>Chat Admin</a>",
             'data'      => $data
         ];
         return $this->respond($response, 200);
@@ -230,24 +272,63 @@ class Peserta extends BaseController
             return $this->respond($response, 400);
         }
     }
-    public function edit($idPeserta = null)
+    public function editAkunDanPeserta($idPeserta = null)
     {
         $modelPeserta           = new Model_peserta;
+        $modelAkun              = new Model_akun;
+        $modelData              = new Model_data;
         $modelLog               = new Model_log;
         $usernameAkses          = $this->request->getVar('usernameAkses');
+        $usernamePeserta        = $this->request->getVar('usernamePeserta');
         $nikPeserta             = $this->request->getVar('nikPeserta');
         $namaPeserta            = $this->request->getVar('namaPeserta');
         $nomorTeleponPeserta    = $this->request->getVar('nomorTeleponPeserta');
-        $data = [
+        // Data Akun Peserta
+        $cekAkun = $modelData->cekPesertaByIdPeserta($idPeserta);
+        $idAkunPeserta = $cekAkun[0]['akun'];
+        $dataPeserta = [
             'nikPeserta'            => $nikPeserta,
             'namaPeserta'           => $namaPeserta,
             'nomorTeleponPeserta'   => $nomorTeleponPeserta
         ];
-        $modelPeserta->update($idPeserta, $data);
+        $modelPeserta->update($idPeserta, $dataPeserta);
+        $dataAkun = [
+            'username'              => $usernamePeserta
+        ];
+        $modelAkun->update($idAkunPeserta, $dataAkun);
         $dataLog = [
             'username'      => $usernameAkses,
             'waktu'         => date('Y-m-d H:i:s'),
             'keterangan'    => "Melakukan perubahan data peserta atas nama " . $namaPeserta
+        ];
+        $modelLog->insert($dataLog);
+        $response = [
+            'status'    => 200,
+            'messages'  => "Berhasil melakukan perubahan data Peserta",
+        ];
+        return $this->respond($response, 200);
+    }
+    public function editProfil($idPeserta = null)
+    {
+        $modelPeserta           = new Model_peserta;
+        $modelData              = new Model_data;
+        $modelLog               = new Model_log;
+        $usernameAkses          = $this->request->getVar('usernameAkses');
+        $namaLengkap            = $this->request->getVar('namaPeserta');
+        $email                  = $this->request->getVar('emailPesera');
+        $namaKlinik             = $this->request->getVar('namaKlinik');
+        $alamatKlinik           = $this->request->getVar('alamatKlinik');
+        $dataPeserta = [
+            'namaPeserta'   => $namaLengkap,
+            'emailpeserta'  => $email,
+            'namaKlinik'    => $namaKlinik,
+            'alamatKlinik'  => $alamatKlinik
+        ];
+        $modelPeserta->update($idPeserta, $dataPeserta);
+        $dataLog = [
+            'username'      => $usernameAkses,
+            'waktu'         => date('Y-m-d H:i:s'),
+            'keterangan'    => "Melakukan perubahan data peserta atas nama " . $namaLengkap
         ];
         $modelLog->insert($dataLog);
         $response = [
@@ -313,7 +394,20 @@ class Peserta extends BaseController
         $modelPeserta   = new Model_peserta;
         $modelData      = new Model_data;
         $modelLog       = new Model_log;
-        $dataPeserta    = $modelData->cekUsernamePeserta($kodePeserta);
+        $dataPeserta    = $modelData->cekPesertaByKodePeserta($kodePeserta);
+        if ($dataPeserta == null) {
+            $dataLog = [
+                'username'   => $usernameAkses,
+                'waktu'      => date('Y-m-d H:i:s'),
+                'keterangan' => "Data Tidak Ditemukan"
+            ];
+            $modelLog->insert($dataLog);
+            $response = [
+                'status'    => 202,
+                'messages'  => "Mohon Maaf, Data tidak ditemukan, Silahkan Hubungi Panitia ",
+            ];
+            return $this->respond($response, 202);
+        }
         if ($dataPeserta[0]['kehadiran'] == 1) {
             $dataLog = [
                 'username'   => $usernameAkses,
@@ -339,7 +433,7 @@ class Peserta extends BaseController
             $modelLog->insert($dataLog);
             $response = [
                 'status'    => 200,
-                'messages'  => "Berhasil Konfirmasi Kehadiran Peserta",
+                'messages'  => "Berhasil Konfirmasi Kehadiran Peserta Atas nama <br><h3>" . $dataPeserta[0]['namaPeserta'] . "<br>Id Peserta : " . $dataPeserta[0]['idPeserta'] . "</h3>",
             ];
             return $this->respond($response, 200);
         }
@@ -367,5 +461,131 @@ class Peserta extends BaseController
         $modelData    = new Model_data;
         $dataPeserta  = $modelData->cekPesertaByIdPeserta($idPeserta);
         return $this->response->download('uploads/buktiBayar/' . $dataPeserta[0]['buktiBayar'], null);
+    }
+    public function updateJenisPeserta()
+    {
+        $modelPeserta   = new Model_peserta;
+        $modelLog       = new Model_log;
+        $usernameAkses  = $this->request->getVar('usernameAkses');
+        $idPeserta      = $this->request->getVar('idPeserta');
+        $peserta        = $this->request->getVar('peserta');
+        $panitia        = $this->request->getVar('panitia');
+        $moderator      = $this->request->getVar('moderator');
+        $stand          = $this->request->getVar('stand');
+        $data = [
+            'peserta'   => $peserta,
+            'panitia'   => $panitia,
+            'moderator' => $moderator,
+            'stand'     => $stand
+        ];
+
+        $modelPeserta->update($idPeserta, $data);
+        $dataLog = [
+            'username'   => $usernameAkses,
+            'waktu'      => date('Y-m-d H:i:s'),
+            'keterangan' => "Melakukan Pembaharuan Jenis Peserta"
+        ];
+        $modelLog->insert($dataLog);
+        $response = [
+            'status'    => 200,
+            'messages'  => "Berhasil Pembaharuan Jenis Peserta",
+        ];
+        return $this->respond($response, 200);
+    }
+    public function updateFotoProfil($idPeserta = null)
+    {
+        $modelPeserta   = new Model_peserta;
+        $modelLog       = new Model_log;
+        $modelData      = new Model_data;
+        $usernameAkses  = $this->request->getPost('usernameAkses');
+        $foto           = $this->request->getFile('foto');
+        $namaFoto       = $foto->getRandomName();
+        $dataPeserta    = $modelData->cekPesertaByIdPeserta($idPeserta);
+        unlink('uploads/foto/' . $dataPeserta[0]['foto']);
+        $foto->move('uploads/foto/', $namaFoto);
+        $data = [
+            'foto'  => $namaFoto,
+        ];
+        $modelPeserta->update($idPeserta, $data);
+        $dataLog = [
+            'username'      => $usernameAkses,
+            'waktu'         => date('Y-m-d H:i:s'),
+            'keterangan'    => "Melakukan Update Foto Profile " . $dataPeserta[0]['namaPeserta']
+        ];
+        $modelLog->insert($dataLog);
+        $response = [
+            'status'    => 200,
+            'messages'  => "Berhasil Update Foto Profil",
+        ];
+        return $this->respond($response, 200);
+    }
+    public function konfirmasiMasukRuangan($id = null)
+    {
+        $modelPeserta        = new Model_peserta;
+        $modelData           = new Model_data;
+        $modelLog            = new Model_log;
+        $kodePeserta         = substr($id, 0, 1);
+        if ($kodePeserta == "P") {
+            $kode           = substr($id, 1);
+            $dataPeserta    = $modelData->cekPesertaByIdPeserta($kode);
+            if ($dataPeserta == null) {
+                $dataLog = [
+                    'username'   => "Validator",
+                    'waktu'      => date('Y-m- d H:i:s'),
+                    'keterangan' => "Data Tidak Ditemukan"
+                ];
+                $modelLog->insert($dataLog);
+                $response = [
+                    'status'    => 202,
+                    'messages'  => "Mohon Maaf, Data tidak ditemukan, Silahkan Hubungi Panitia ",
+                ];
+                return $this->respond($response, 202);
+            }
+            $dataLog = [
+                'username'   => "Validator",
+                'waktu'      => date('Y-m-d H:i:s'),
+                'keterangan' => "Melakukan Konfirmasi Kehadiran Peserta"
+            ];
+            $modelLog->insert($dataLog);
+            $response = [
+                'status'    => 200,
+                'messages'  => "Berhasil Konfirmasi Masuk Ruangan Peserta Atas nama <br><h3>" . $dataPeserta[0]['namaPeserta'] . "<br>Id Peserta : " . $dataPeserta[0]['idPeserta'] . "</h3>",
+            ];
+            return $this->respond($response, 200);
+        } else if ($kodePeserta == "B") {
+            $kode = substr($id, 1);
+            $dataBooth  = $modelData->cekPenjagaStand($kode);
+            if ($dataBooth == null) {
+                $dataLog = [
+                    'username'   => "Validator",
+                    'waktu'      => date('Y-m- d H:i:s'),
+                    'keterangan' => "Data Tidak Ditemukan"
+                ];
+                $modelLog->insert($dataLog);
+                $response = [
+                    'status'    => 202,
+                    'messages'  => "Mohon Maaf, Data tidak ditemukan, Silahkan Hubungi Panitia ",
+                ];
+                return $this->respond($response, 202);
+            } else {
+                $dataLog = [
+                    'username'   => "Validator",
+                    'waktu'      => date('Y-m-d H:i:s'),
+                    'keterangan' => "Melakukan Konfirmasi Masuk Ruangan"
+                ];
+                $modelLog->insert($dataLog);
+                $response = [
+                    'status'    => 200,
+                    'messages'  => "Berhasil Konfirmasi Masuk Ruangan Dengan Booth <br><h3> Nama Perusahaan : " . $dataBooth[0]['perusahaan'] . "<br>User : " . $dataBooth[0]['user'] . "</h3>",
+                ];
+                return $this->respond($response, 200);
+            }
+        } else {
+            $response = [
+                'status'    => 202,
+                'messages'  => "Mohon Maaf, Data tidak ditemukan, Silahkan Hubungi Panitia ",
+            ];
+            return $this->respond($response, 202);
+        }
     }
 }
