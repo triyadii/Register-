@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use Picqer;
+
 class Page extends BaseController
 {
     public function landingPage()
@@ -12,6 +14,7 @@ class Page extends BaseController
         ];
         $session->set($ses_data);
         return view('landingPage');
+        // return view('maintenance');
     }
     public function registrasi()
     {
@@ -119,7 +122,30 @@ class Page extends BaseController
             return redirect()->to(base_url() . 'KonfirmasiPembayaran');
         }
 
-        return view('dashboardPeserta', compact('dataPeserta'));
+        $tipeBarcode   = "HTML";
+        $isiBarcode    = $dataPeserta[0]['kodePeserta'];
+        // Proses Barcode
+        switch ($tipeBarcode) {
+            case "HTML":
+                $generator = new Picqer\Barcode\BarcodeGeneratorHTML();
+                break;
+            case "JPG":
+                header('Content-type: image/jpeg');
+                $generator = new Picqer\Barcode\BarcodeGeneratorJPG();
+                break;
+            case "PNG":
+                $generator = new Picqer\Barcode\BarcodeGeneratorPNG();
+                break;
+            case "SVG":
+                $generator = new Picqer\Barcode\BarcodeGeneratorSVG();
+                break;
+            default:
+                $generator = new Picqer\Barcode\BarcodeGeneratorHTML();
+        }
+
+        $barcode   = $generator->getBarcode($isiBarcode, $generator::TYPE_CODE_128);
+        $generator = ["barcode" => $barcode, "text" => $isiBarcode, "tipe" => $tipeBarcode];
+        return view('dashboardPeserta', compact('dataPeserta', 'generator'));
         // return redirect()->to(base_url() . 'UploadBuktiBayar');
     }
     public function DashboardOperator()
@@ -164,7 +190,6 @@ class Page extends BaseController
         if ($statusLogin != "1") {
             return redirect()->to(base_url());
         }
-
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => 'https://api.register.co.id/api/TampilPesertaByIdEvent/' . $event,
@@ -186,7 +211,39 @@ class Page extends BaseController
         $hasilResponse = json_decode($response, true);
         $dataPeserta   = $hasilResponse['data'];
 
+
         return view('peserta', compact('dataPeserta'));
+    }
+    public function penjagaStand()
+    {
+        $session        = session();
+        $statusLogin    = $session->get('statusLogin');
+        $event          = $session->get('event');
+        $token          = $session->get('token');
+        if ($statusLogin != "1") {
+            return redirect()->to(base_url());
+        }
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://api.register.co.id/api/TampilPenjagaStand',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+            CURLOPT_HTTPHEADER => array(
+                'Content-Type: application/json',
+                'Authorization: Bearer ' . $token
+            ),
+        ));
+        $response = curl_exec($curl);
+        $httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        curl_close($curl);
+        $hasilResponse = json_decode($response, true);
+        $dataStand   = $hasilResponse['data'];
+        return view('stand', compact('dataStand'));
     }
     public function scanBarcodeRegister()
     {
@@ -205,5 +262,14 @@ class Page extends BaseController
         ];
         $session->set($ses_data);
         return view('scanBarcodeMasuk');
+    }
+    public function updatePenjagaStand()
+    {
+        $session = session();
+        $ses_data = [
+            'event'        => "1"
+        ];
+        $session->set($ses_data);
+        return view('updatePenjagaStand');
     }
 }

@@ -151,23 +151,6 @@ class Akun extends BaseController
                     ]
                 ];
             } // Jika Stand
-            else if ($cekUsername[0]['hakAkses'] == "6") {
-                $cekPeserta    = $modelData->cekAkunPeserta($cekUsername[0]['idAkun']);
-                $response = [
-                    'status'    => 200,
-                    'messages'  => "Login Berhasil",
-                    'data'      => [
-                        'username'      => $cekPeserta[0]['username'],
-                        'namaPeserta'   => $cekPeserta[0]['namaPeserta'],
-                        'event'         => $cekPeserta[0]['event'],
-                        'namaEvent'     => $cekPeserta[0]['namaEvent'],
-                        'idPeserta'     => $cekPeserta[0]['idPeserta'],
-                        'namaHakAkses'   => $cekPeserta[0]['namaHakAkses'],
-                        'idHakAkses'     => $cekPeserta[0]['idHakAkses'],
-                        'token'         => $token,
-                    ]
-                ];
-            }
             return $this->respond($response, 200);
         } else {
             $dataLog = [
@@ -190,7 +173,6 @@ class Akun extends BaseController
         $modelData      = new Model_data;
         $usernameAkses  = $this->request->getVar('usernameAkses');
         $nama           = $this->request->getVar('nama');
-        $nomorTelepon   = $this->request->getVar('nomorTelepon');
         $username       = $this->request->getVar('username');
         $hakAkses       = $this->request->getVar('hakAkses');
         $password       = $this->request->getVar('password');
@@ -228,45 +210,6 @@ class Akun extends BaseController
             'status'    => 200,
             'messages'  => "Berhasil Melakukan Penambahan Akun Baru",
             'data'      => $data
-        ];
-        return $this->respond($response, 200);
-    }
-    public function edit($idAkun = null)
-    {
-        $modelAkun          = new Model_akun;
-        $modelLog           = new Model_log;
-        $modelData          = new Model_data;
-        $usernameAkses      = $this->request->getVar('usernameAkses');
-        $nama               = $this->request->getVar('nama');
-        $nomorTelepon       = $this->request->getVar('nomorTelepon');
-        $username           = $this->request->getVar('username');
-        $hakAkses           = $this->request->getVar('hakAkses');
-        $cekUsername        = $modelData->cekUsername($username);
-        if ($cekUsername != null) {
-            $data = [
-                'nama'          => $nama,
-                'nomorTelepon'  => $nomorTelepon,
-                'hakAkses'      => $hakAkses,
-            ];
-        } else {
-            $data = [
-                'nama'          => $nama,
-                'nomorTelepon'  => $nomorTelepon,
-                'username'      => $username,
-                'hakAkses'      => $hakAkses,
-            ];
-        }
-
-        $modelAkun->update($idAkun, $data);
-        $dataLog = [
-            'username'      => $usernameAkses,
-            'waktu'         => date('Y-m-d H:i:s'),
-            'keterangan'    => "Melakukan perubahan data pada akun " . $nama
-        ];
-        $modelLog->insert($dataLog);
-        $response = [
-            'status'    => 200,
-            'messages'  => "Berhasil melakukan perubahan akun",
         ];
         return $this->respond($response, 200);
     }

@@ -66,15 +66,26 @@ $routes->group("api", function ($routes) {
     $routes->get("TampilPesertaByIdEvent/(:num)", "Peserta::tampilPesertaByIdEvent/$1");
     $routes->get("TampilPesertaByIdPeserta/(:num)", "Peserta::tampilPesertaByIdPeserta/$1");
     $routes->get("TampilPesertaByKodePeserta/(:num)", "Peserta::tampilPesertaByKodePeserta/$1");
+    $routes->get("KonfirmasiMasukRuangan/(:any)", "Peserta::konfirmasiMasukRuangan/$1");
     $routes->post("PendaftaranPeserta", "Peserta::create");
     $routes->post("LoginPeserta", "Peserta::login");
-    $routes->post("EditPeserta/(:num)", "Peserta::edit/$1", ['filter' => 'authFilter']);
+    $routes->post("EditPeserta/(:num)", "Peserta::editAkunDanPeserta/$1", ['filter' => 'authFilter']);
+    $routes->post("EditProfil/(:num)", "Peserta::editProfil/$1", ['filter' => 'authFilter']);
     $routes->get("KonfirmasiPembayaranPeserta/(:num)/(:num)/(:any)", "Peserta::konfirmasiPembayaran/$1/$2/$3", ['filter' => 'authFilter']);
     $routes->get("KonfirmasiKehadiran/(:any)/(:any)", "Peserta::konfirmasiKehadiran/$1/$2", ['filter' => 'authFilter']);
     $routes->delete("HapusPeserta/(:num)/(:any)", "Peserta::hapus/$1/$2", ['filter' => 'authFilter']);
     $routes->post("UploadBuktiBayarPeserta/(:num)", "Peserta::uploadBuktiBayar/$1", ['filter' => 'authFilter']);
     $routes->delete("HapusPeserta/(:num)/(:any)", "Peserta::hapus/$1/$2", ['filter' => 'authFilter']);
     $routes->get("DownloadBuktiBayar/(:num)", "Peserta::downloadBuktiBayar/$1");
+    $routes->post("UpdateJenisPeserta", "Peserta::updateJenisPeserta", ['filter' => 'authFilter']);
+    $routes->post("UpdateFotoProfil/(:num)", "Peserta::updateFotoProfil/$1", ['filter' => 'authFilter']);
+
+    // Manajemen Penjaga
+    $routes->get("TampilPenjagaStand", "Stand::index", ['filter' => 'authFilter']);
+    $routes->post("PendaftaranPenjagaStand", "Stand::create", ['filter' => 'authFilter']);
+    $routes->post("UpdatePenjagaStand/(:num)", "Stand::updatePenjagaStand/$1", ['filter' => 'authFilter']);
+    $routes->delete("HapusPenjagaStand/(:num)/(:any)", "Stand::hapus/$1/$2", ['filter' => 'authFilter']);
+    $routes->delete("CekBarcodePenjagaBooth/(:num)", "Stand::cekBarcodePenjagaBooth/$1", ['filter' => 'authFilter']);
 });
 
 /*

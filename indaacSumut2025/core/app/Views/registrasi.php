@@ -59,58 +59,40 @@ $session    = session();
                                     <form method="POST" action="Register" enctype="multipart/form-data">
                                         <div class="row">
                                             <div class="col-12">
-                                                <label for="yourUsername" class="form-label">Nomor Induk
-                                                    Kependudukan</label> <span
-                                                    style="color: red; font-size:10px;">*</span>
+
+                                                <label>Nomor Induk Kependudukan</label>
                                                 <div class="input-group has-validation">
                                                     <input type="text" name="nik" class="form-control" id="yourUsername"
                                                         placeholder="Masukkan Nomor Induk Kependudukan" required>
                                                     <div class="invalid-feedback">Masukkan Nomor Induk Kependudukan
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <label for="yourUsername" class="form-label">Gelar Depan
-                                                        </label>
-                                                        <div class="input-group has-validation">
-                                                            <input type="text" name="gelarDepan" class="form-control"
-                                                                id="yourUsername" placeholder="Masukkan Gelar Depan">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label for="yourUsername" class="form-label">Nama Depan
-                                                        </label><span style="color: red; font-size:10px;">*</span>
-                                                        <div class="input-group has-validation">
-                                                            <input type="text" name="namaDepan" class="form-control"
-                                                                id="yourUsername" placeholder="Masukkan Nama Depan"
-                                                                required>
-                                                        </div>
+                                                <label style="margin-top: 2%;">Nama Depan / Nama Panggilan <span
+                                                        style="color: red; font-size:10px;">* menggunakan huruf kecil
+                                                        dan tanpa spasi</span>
+                                                </label>
+                                                <div class="col-12">
+                                                    <div class="input-group has-validation">
+                                                        <input type="text" name="namaPanggilan" class="form-control"
+                                                            id="yourUsername"
+                                                            placeholder="Masukkan Nama Depan / Panggilan">
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <label for="yourUsername" class="form-label">Nama Belakang
-                                                        </label><span style="color: red; font-size:10px;">*</span>
-                                                        <div class="input-group has-validation">
-                                                            <input type="text" name="namaBelakang" class="form-control"
-                                                                id="yourUsername" placeholder="Masukkan Nama Belakang"
-                                                                required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label for="yourUsername" class="form-label">Gelar Belakang
-                                                        </label>
-                                                        <div class="input-group has-validation">
-                                                            <input type="text" name="gelarBelakang" class="form-control"
-                                                                id="yourUsername" placeholder="Masukkan Gelar Belakang">
-                                                        </div>
+                                                <label style="margin-top: 2%;" class="text-left small">Nama Lengkap
+                                                    (Beserta Gelar)<span style="color: red; font-size:10px;">*</span>
+                                                </label>
+                                                <div class="col-12">
+                                                    <div class="input-group has-validation">
+                                                        <input type="text" name="namaLengkap" class="form-control"
+                                                            id="yourUsername" placeholder="Masukkan Nama Lengkap"
+                                                            required>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row" style="margin-top: 2%;">
                                                     <div class="col-6">
-                                                        <label for="yourUsername" class="form-label">Nama Klinik /
-                                                            Praktik
-                                                        </label><span style="color: red; font-size:10px;">*</span>
+                                                        <label class="text-left small">Nama Klinik / Praktik<span
+                                                                style="color: red; font-size:10px;">*</span>
+                                                        </label>
                                                         <div class="input-group has-validation">
                                                             <input type="text" name="namaKlinik" class="form-control"
                                                                 id="yourUsername" placeholder="Masukkan Nama Klinik"
@@ -118,58 +100,116 @@ $session    = session();
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
-                                                        <label for="yourUsername" class="form-label">Alamat Klinik
-                                                        </label><span style="color: red; font-size:10px;">*</span>
+                                                        <label class="text-left small">Alamat Klinik<span
+                                                                style="color: red; font-size:10px;">*</span>
+                                                        </label>
                                                         <div class="input-group has-validation">
                                                             <input type="text" name="alamatKlinik" class="form-control"
                                                                 id="yourUsername" placeholder="Masukkan Alamat Klinik">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <label for="yourUsername" class="form-label">Email</label><span
-                                                    style="color: red; font-size:10px;">*</span>
+                                                <label style="margin-top: 2%;" class="text-left small">Email<span
+                                                        style="color: red; font-size:10px;">*</span>
+                                                </label>
                                                 <div class="input-group has-validation">
                                                     <input type="text" name="emailPeserta" class="form-control"
                                                         id="yourUsername" placeholder="Masukkan Email" required>
                                                 </div>
-                                                <label for="yourUsername" class="form-label">Nomor WhatsApp<span
-                                                        style="color: red; font-size:10px;">*</span>
+                                                <label style="margin-top: 2%;" class="text-left small">Nomor
+                                                    WhatsApp<span style="color: red; font-size:10px;">*</span>
                                                     <span style="color: red; font-size : 10px;">(ex :
-                                                        082276156253)</span></label>
+                                                        082276156253)</span>
+                                                </label>
                                                 <div class="input-group has-validation">
                                                     <input type="number" name="nomorTelepon" class="form-control"
                                                         id="yourUsername"
                                                         placeholder="masukkan Nomor WhatsApp ex: 082276156253" required>
                                                 </div>
+                                                <div class="row" style="margin-top: 2%;">
+                                                    <div class="col-6">
+                                                        <label class="text-left small">Nama Rekening<span
+                                                                style="color:red; font-size:10px;"> *Apabila Sudah
+                                                                Melakukan
+                                                                Pembayaran</span></label>
+                                                        <div class="input-group has-validation">
+                                                            <input type="text" name="namaRekening" class="form-control"
+                                                                id="yourUsername" placeholder="Masukkan Nama Bank">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label class="text-left small">Nomor Rekening<span
+                                                                style="color:red; font-size:10px;"> *Apabila Sudah
+                                                                Melakukan
+                                                                Pembayaran</span></label>
+                                                        <div class="input-group has-validation">
+                                                            <input type="text" name="nomorRekening" class="form-control"
+                                                                id="yourUsername" placeholder="Masukkan Nomor Rekening">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-top: 2%;">
+                                                    <div class="col-6">
+                                                        <label class="text-left small">Upload Foto
+                                                            Peserta <span
+                                                                style="color:red; font-size:10px;">*Optional</span>
+                                                        </label>
+                                                        <div class="input-group">
+                                                            <input type="file" name="foto" id="upload"
+                                                                onchange="pathGambarPeserta(this);">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label class="text-left small">Upload Bukti Bayar <span
+                                                                style="color:red; font-size:10px;">*Apabila Sudah
+                                                                Melakukan
+                                                                Pembayaran</span>
+                                                        </label>
+                                                        <div class="input-group">
+                                                            <input type="file" name="buktiBayar" id="upload"
+                                                                onchange="pathGambarBuktiBayar(this);">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="margin-top: 2%;">
+                                                <div class="col-6">
+                                                    <img id="imagePeserta"
+                                                        style=" width:100%; height:300px; margin:0 auto;">
+                                                    <label for="yourUsername" class="form-label">Foto
+                                                        Peserta</label>
+                                                </div>
+                                                <div class="col-6">
 
-                                                <label for="yourUsername" class="form-label">Foto Peserta</label>
-                                                <div class="input-group     ">
-                                                    <input type="file" name="foto" id="upload"
-                                                        onchange="readURL(this);">
+                                                    <img id="imageBuktiBayar"
+                                                        style=" width:100%; height:300px; margin:0 auto;">
+                                                    <label for="yourUsername" class="form-label">Gambar
+                                                        Bukti
+                                                        Bayar</label>
                                                 </div>
 
                                             </div>
-                                            <img id="image"
-                                                style=" width:100%; height:300px; margin:0 auto; margin-top: 3%;">
-                                            <div class="col-12" style="margin-top:3%;">
-                                                <button class="btn btn-primary w-100" type="submit">Registrasi</button>
-                                            </div>
-                                            <div class="col-12">
-                                                <br>
-                                                <p class="small mb-0">anda sudah memiliki akun ? <a
-                                                        href="<?= base_url() ?>Login">Silahkan Masuk Dengan Akun
-                                                        Anda</a>
-                                                </p>
-                                            </div>
                                         </div>
-                                    </form>
+
+                                        <div class="col-12" style="margin-top:3%;">
+                                            <button class="btn btn-primary w-100" type="submit">Registrasi</button>
+                                        </div>
+                                        <div class="col-12">
+                                            <br>
+                                            <p class="small mb-0">anda sudah memiliki akun ? <a
+                                                    href="<?= base_url() ?>Login">Silahkan Masuk Dengan Akun
+                                                    Anda</a>
+                                            </p>
+                                        </div>
                                 </div>
-
+                                </form>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
+
                 </div>
+        </div>
         </div>
 
         </section>
@@ -199,12 +239,24 @@ $session    = session();
             class="bi bi-arrow-up-short"></i></a>
 
     <script>
-        function readURL(input) {
+        function pathGambarPeserta(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 
                 reader.onload = function(e) {
-                    $('#image').attr('src', e.target.result);
+                    $('#imagePeserta').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function pathGambarBuktiBayar(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#imageBuktiBayar').attr('src', e.target.result);
                 }
 
                 reader.readAsDataURL(input.files[0]);
